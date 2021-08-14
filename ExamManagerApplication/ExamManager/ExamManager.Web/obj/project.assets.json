@@ -1519,6 +1519,34 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "ExamManager.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.12"
+        },
+        "compile": {
+          "bin/placeholder/ExamManager.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ExamManager.Domain.dll": {}
+        }
+      },
+      "ExamManager.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "ExamManager.Domain": "1.0.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.12",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.12"
+        },
+        "compile": {
+          "bin/placeholder/ExamManager.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ExamManager.Repository.dll": {}
+        }
       }
     }
   },
@@ -5686,10 +5714,22 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "ExamManager.Domain/1.0.0": {
+      "type": "project",
+      "path": "../ExamManager.Domain/ExamManager.Domain.csproj",
+      "msbuildProject": "../ExamManager.Domain/ExamManager.Domain.csproj"
+    },
+    "ExamManager.Repository/1.0.0": {
+      "type": "project",
+      "path": "../ExamManager.Repository/ExamManager.Repository.csproj",
+      "msbuildProject": "../ExamManager.Repository/ExamManager.Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "ExamManager.Domain >= 1.0.0",
+      "ExamManager.Repository >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 3.1.14",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.14",
       "Microsoft.AspNetCore.Identity.UI >= 3.1.14",
@@ -5723,7 +5763,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj": {
+              "projectPath": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj"
+            },
+            "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Repository\\ExamManager.Repository.csproj": {
+              "projectPath": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Repository\\ExamManager.Repository.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

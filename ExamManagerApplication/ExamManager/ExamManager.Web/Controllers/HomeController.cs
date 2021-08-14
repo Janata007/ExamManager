@@ -1,4 +1,4 @@
-﻿using ExamManager.Web.Models;
+﻿using ExamManager.Domain;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;

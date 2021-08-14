@@ -13,4 +13,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.14" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ExamManager.Domain\ExamManager.Domain.csproj" />
+    <ProjectReference Include="..\ExamManager.Repository\ExamManager.Repository.csproj" />
+  </ItemGroup>
+
 </Project>

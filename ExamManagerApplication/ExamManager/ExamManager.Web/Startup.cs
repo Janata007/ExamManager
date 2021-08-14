@@ -1,4 +1,3 @@
-using ExamManager.Web.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -12,6 +11,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ExamManager.Repository;
+using ExamManager.Domain.Identity;
+using ExamManager.Repository.Implementation;
+using ExamManager.Repository.Interface; 
 
 namespace ExamManager.Web
 {
@@ -30,8 +33,16 @@ namespace ExamManager.Web
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped(typeof(IPredmetRepository), typeof(PredmetRepository));
+            services.AddScoped(typeof(ISproveduvacRepository), typeof(SproveduvacRepository));
+            services.AddScoped(typeof(IStudentRepository), typeof(StudentRepository));
+            services.AddScoped(typeof(IUserRepository), typeof(UserRepository));
+            services.AddScoped(typeof(IStudiskiCiklusRepository), typeof(StudiskiCiklusRepository));
+
             services.AddControllersWithViews();
             services.AddRazorPages();
         }

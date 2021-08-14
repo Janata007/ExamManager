@@ -1,0 +1,9 @@
+C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Service\bin\Debug\netcoreapp3.1\ExamManager.Service.deps.json
+C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Service\bin\Debug\netcoreapp3.1\ExamManager.Service.dll
+C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Service\bin\Debug\netcoreapp3.1\ExamManager.Service.pdb
+C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Service\obj\Debug\netcoreapp3.1\ExamManager.Service.csprojAssemblyReference.cache
+C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Service\obj\Debug\netcoreapp3.1\ExamManager.Service.AssemblyInfoInputs.cache
+C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Service\obj\Debug\netcoreapp3.1\ExamManager.Service.AssemblyInfo.cs
+C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Service\obj\Debug\netcoreapp3.1\ExamManager.Service.csproj.CoreCompileInputs.cache
+C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Service\obj\Debug\netcoreapp3.1\ExamManager.Service.dll
+C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Service\obj\Debug\netcoreapp3.1\ExamManager.Service.pdb

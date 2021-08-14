@@ -1,0 +1,12 @@
+C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Repository\bin\Debug\netcoreapp3.1\ExamManager.Domain.dll
+C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Repository\obj\Debug\netcoreapp3.1\ExamManager.Repository.csprojAssemblyReference.cache
+C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Repository\obj\Debug\netcoreapp3.1\ExamManager.Repository.AssemblyInfoInputs.cache
+C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Repository\obj\Debug\netcoreapp3.1\ExamManager.Repository.AssemblyInfo.cs
+C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Repository\obj\Debug\netcoreapp3.1\ExamManager.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Repository\bin\Debug\netcoreapp3.1\ExamManager.Repository.deps.json
+C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Repository\bin\Debug\netcoreapp3.1\ExamManager.Repository.dll
+C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Repository\bin\Debug\netcoreapp3.1\ExamManager.Repository.pdb
+C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Repository\bin\Debug\netcoreapp3.1\ExamManager.Domain.pdb
+C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Repository\obj\Debug\netcoreapp3.1\ExamManager.Repository.csproj.CopyComplete
+C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Repository\obj\Debug\netcoreapp3.1\ExamManager.Repository.dll
+C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Repository\obj\Debug\netcoreapp3.1\ExamManager.Repository.pdb
