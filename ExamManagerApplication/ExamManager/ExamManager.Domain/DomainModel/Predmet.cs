@@ -6,10 +6,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ExamManager.Domain.DomainModel
 {
-    public class Predmet
+    public class Predmet : BaseEntity
     {
-        [Key]
-        public string PredmetId { get; set; }
 
         public Semestar Semestar { get; set; }
 

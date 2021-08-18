@@ -27,7 +27,7 @@ namespace ExamManager.Repository
             base.OnModelCreating(builder);
 
             builder.Entity<Predmet>()
-                .Property(z => z.PredmetId)
+                .Property(z => z.Id)
                 .ValueGeneratedOnAdd();
 
             builder.Entity<Predmet>()
@@ -40,7 +40,7 @@ namespace ExamManager.Repository
                 .ValueGeneratedOnAdd();
 
             builder.Entity<Sproveduvac>()
-                .Property(z=>z.SproveduvacId)
+                .Property(z=>z.Id)
                 .ValueGeneratedOnAdd();
 
             builder.Entity<Student>()

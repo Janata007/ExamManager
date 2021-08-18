@@ -5,11 +5,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ExamManager.Domain.DomainModel
 {
-    public class Sproveduvac  
+    public class Sproveduvac  : BaseEntity
     {
-        [Key]
-        public string SproveduvacId { get; set; }
-
+     
         public string ImePrezime { get; set; }
 
         public virtual Termin SproveduvacDezuraVoTermin { get; set; }

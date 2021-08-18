@@ -24,14 +24,14 @@ namespace ExamManager.Repository.Implementation
             return entities.AsEnumerable();
         }
 
-        public Predmet Get(string id)
+        public Predmet Get(Guid ? id)
         {
             return entities
                 .Include(z => z.PredmetOdStudiskiProgrami)
                 .Include(z => z.StudiskiCiklus)
                 .Include(z => z.PredmetSePolagaVoTermini)
                 .Include(z => z.StudentiKoiPolagaatPredmet)
-                .SingleOrDefault(z => z.PredmetId == id);
+                .SingleOrDefault(z => z.Id == id);
         }
 
         public void Insert(Predmet entity)

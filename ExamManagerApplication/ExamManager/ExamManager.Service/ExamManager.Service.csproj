@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ExamManager.Domain\ExamManager.Domain.csproj" />
+    <ProjectReference Include="..\ExamManager.Repository\ExamManager.Repository.csproj" />
+  </ItemGroup>
+
 </Project>

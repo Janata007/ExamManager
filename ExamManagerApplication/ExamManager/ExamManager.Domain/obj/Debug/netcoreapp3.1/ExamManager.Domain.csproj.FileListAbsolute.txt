@@ -7,3 +7,12 @@ C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\
 C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Domain\obj\Debug\netcoreapp3.1\ExamManager.Domain.csproj.CoreCompileInputs.cache
 C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Domain\obj\Debug\netcoreapp3.1\ExamManager.Domain.dll
 C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Domain\obj\Debug\netcoreapp3.1\ExamManager.Domain.pdb
+C:\Users\Jana\source\repos\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Domain\bin\Debug\netcoreapp3.1\ExamManager.Domain.deps.json
+C:\Users\Jana\source\repos\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Domain\bin\Debug\netcoreapp3.1\ExamManager.Domain.dll
+C:\Users\Jana\source\repos\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Domain\bin\Debug\netcoreapp3.1\ExamManager.Domain.pdb
+C:\Users\Jana\source\repos\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Domain\obj\Debug\netcoreapp3.1\ExamManager.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jana\source\repos\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Domain\obj\Debug\netcoreapp3.1\ExamManager.Domain.AssemblyInfoInputs.cache
+C:\Users\Jana\source\repos\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Domain\obj\Debug\netcoreapp3.1\ExamManager.Domain.AssemblyInfo.cs
+C:\Users\Jana\source\repos\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Domain\obj\Debug\netcoreapp3.1\ExamManager.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Jana\source\repos\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Domain\obj\Debug\netcoreapp3.1\ExamManager.Domain.dll
+C:\Users\Jana\source\repos\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Domain\obj\Debug\netcoreapp3.1\ExamManager.Domain.pdb

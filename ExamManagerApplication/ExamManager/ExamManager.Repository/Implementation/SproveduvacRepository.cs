@@ -24,10 +24,10 @@ namespace ExamManager.Repository.Implementation
             return entities.AsEnumerable();
         }
 
-        public Sproveduvac Get(string id)
+        public Sproveduvac Get(Guid ? id)
         {
             return entities
-                .SingleOrDefault(z => z.SproveduvacId == id);
+                .SingleOrDefault(z => z.Id == id);
         }
 
         public void Insert(Sproveduvac entity)
