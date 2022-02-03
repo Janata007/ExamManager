@@ -1,0 +1,36 @@
+﻿@model ExamManager.Domain.DomainModel.Predmet
+
+@{
+    ViewData["Title"] = "Детали";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Детали</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            <label>Предмет</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ImeNaPredmet)
+        </dd>
+        <dt class = "col-sm-2">
+            <label>Семестар</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Semestar)
+        </dd>
+        <dt class = "col-sm-2">
+            <label>Студиски циклус</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StudiskiCiklus.CiklusNaStudii)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.KodNaPredmet">Измени</a> |
+    <a asp-action="Index">Назад кон листа на предмети</a>
+</div>

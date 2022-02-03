@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExamManager", "ExamManager", "{C882196D-8242-412D-A43E-9964511A7FCC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExamManager.Web", "ExamManager\ExamManager.Web\ExamManager.Web.csproj", "{D6CA96C2-C9B5-430D-A01E-98C386244E97}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E7BED953-E7EE-4C80-9232-A44FBF853B56} = {E7BED953-E7EE-4C80-9232-A44FBF853B56}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExamManager.Domain", "ExamManager\ExamManager.Domain\ExamManager.Domain.csproj", "{2A79B809-1FF6-41B1-8E93-3D99B7BA06EE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExamManager.Repository", "ExamManager\ExamManager.Repository\ExamManager.Repository.csproj", "{20E55476-70DD-4E15-ABB3-070914DEDB55}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExamManager.Service", "ExamManager\ExamManager.Service\ExamManager.Service.csproj", "{E7BED953-E7EE-4C80-9232-A44FBF853B56}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6CA96C2-C9B5-430D-A01E-98C386244E97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6CA96C2-C9B5-430D-A01E-98C386244E97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6CA96C2-C9B5-430D-A01E-98C386244E97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6CA96C2-C9B5-430D-A01E-98C386244E97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A79B809-1FF6-41B1-8E93-3D99B7BA06EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A79B809-1FF6-41B1-8E93-3D99B7BA06EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A79B809-1FF6-41B1-8E93-3D99B7BA06EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A79B809-1FF6-41B1-8E93-3D99B7BA06EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20E55476-70DD-4E15-ABB3-070914DEDB55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20E55476-70DD-4E15-ABB3-070914DEDB55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20E55476-70DD-4E15-ABB3-070914DEDB55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20E55476-70DD-4E15-ABB3-070914DEDB55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7BED953-E7EE-4C80-9232-A44FBF853B56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7BED953-E7EE-4C80-9232-A44FBF853B56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7BED953-E7EE-4C80-9232-A44FBF853B56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7BED953-E7EE-4C80-9232-A44FBF853B56}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D6CA96C2-C9B5-430D-A01E-98C386244E97} = {C882196D-8242-412D-A43E-9964511A7FCC}
+		{2A79B809-1FF6-41B1-8E93-3D99B7BA06EE} = {C882196D-8242-412D-A43E-9964511A7FCC}
+		{20E55476-70DD-4E15-ABB3-070914DEDB55} = {C882196D-8242-412D-A43E-9964511A7FCC}
+		{E7BED953-E7EE-4C80-9232-A44FBF853B56} = {C882196D-8242-412D-A43E-9964511A7FCC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92FB712C-E2C6-41CB-AE65-799C21E8F287}
+	EndGlobalSection
+EndGlobal

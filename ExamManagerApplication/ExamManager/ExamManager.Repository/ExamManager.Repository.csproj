@@ -1,0 +1,66 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20210907210950_initData.cs" />
+    <Compile Remove="Migrations\20210907210950_initData.Designer.cs" />
+    <Compile Remove="Migrations\20210907211319_initData.cs" />
+    <Compile Remove="Migrations\20210907211319_initData.Designer.cs" />
+    <Compile Remove="Migrations\20210908172603_data.cs" />
+    <Compile Remove="Migrations\20210908172603_data.Designer.cs" />
+    <Compile Remove="Migrations\20210908172940_initData.cs" />
+    <Compile Remove="Migrations\20210908172940_initData.Designer.cs" />
+    <Compile Remove="Migrations\20210908173104_initData.cs" />
+    <Compile Remove="Migrations\20210908173104_initData.Designer.cs" />
+    <Compile Remove="Migrations\20210908173619_initData.cs" />
+    <Compile Remove="Migrations\20210908173619_initData.Designer.cs" />
+    <Compile Remove="Migrations\20210908173858_initData.cs" />
+    <Compile Remove="Migrations\20210908173858_initData.Designer.cs" />
+    <Compile Remove="Migrations\20210908181717_initData.cs" />
+    <Compile Remove="Migrations\20210908181717_initData.Designer.cs" />
+    <Compile Remove="Migrations\20210908182017_initData.cs" />
+    <Compile Remove="Migrations\20210908182017_initData.Designer.cs" />
+    <Compile Remove="Migrations\20210908191218_initData.cs" />
+    <Compile Remove="Migrations\20210908191218_initData.Designer.cs" />
+    <Compile Remove="Migrations\20210908191323_initData.cs" />
+    <Compile Remove="Migrations\20210908191323_initData.Designer.cs" />
+    <Compile Remove="Migrations\20210908193337_initData.cs" />
+    <Compile Remove="Migrations\20210908193337_initData.Designer.cs" />
+    <Compile Remove="Migrations\20210908194227_initData.cs" />
+    <Compile Remove="Migrations\20210908194227_initData.Designer.cs" />
+    <Compile Remove="Migrations\20210908201355_initPredmeti.cs" />
+    <Compile Remove="Migrations\20210908201355_initPredmeti.Designer.cs" />
+    <Compile Remove="Migrations\20210908201656_newInitData.cs" />
+    <Compile Remove="Migrations\20210908201656_newInitData.Designer.cs" />
+    <Compile Remove="Migrations\20220201101001_CustomTerminMigraton.cs" />
+    <Compile Remove="Migrations\20220201101001_CustomTerminMigraton.Designer.cs" />
+    <Compile Remove="Migrations\20220201101346_CustomTerminMigraton.cs" />
+    <Compile Remove="Migrations\20220201101346_CustomTerminMigraton.Designer.cs" />
+    <Compile Remove="Migrations\20220201101450_CustomTerminMigraton.cs" />
+    <Compile Remove="Migrations\20220201101450_CustomTerminMigraton.Designer.cs" />
+    <Compile Remove="Migrations\20220201102518_CustomTerminMigraton1.cs" />
+    <Compile Remove="Migrations\20220201102518_CustomTerminMigraton1.Designer.cs" />
+    <Compile Remove="Migrations\20220201102655_CustomTerminMigraton1.cs" />
+    <Compile Remove="Migrations\20220201102655_CustomTerminMigraton1.Designer.cs" />
+    <Compile Remove="Migrations\20220201102926_CustomTerminMigraton1.cs" />
+    <Compile Remove="Migrations\20220201102926_CustomTerminMigraton1.Designer.cs" />
+    <Compile Remove="Migrations\20220201103112_CustomTerminMigraton1.cs" />
+    <Compile Remove="Migrations\20220201103112_CustomTerminMigraton1.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.95.4" />
+    <PackageReference Include="ExcelDataReader" Version="3.6.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.12" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ExamManager.Domain\ExamManager.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,53 @@
+﻿@model ExamManager.Domain.DomainModel.Vkupen
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Термини</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <label>Испит</label>
+            </th>
+            <th>
+                <label>Времетраење</label>
+            </th>
+            <th>
+                <label>Просторија</label>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.customTermin.examId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.customTermin.duration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.customTermin.roomId)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label><b>Студенти</b></label>
+            </td>
+        </tr>
+       @foreach (var item in Model.students) {
+        <tr>
+            <td>
+                 @Html.DisplayFor(modelItem => item.BrojNaIndeks)
+            </td>
+            <td>
+                 @Html.DisplayFor(modelItem => item.ImePrezime)
+            </td>
+        </tr>
+       }
+
+    </tbody>
+</table>

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<ExamManager.Domain.DomainModel.CustomTermin>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Термини</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <label>Испит</label>
+            </th>
+            <th>
+                <label>Времетраење</label>
+            </th>
+            <th>
+                <label>Просторија</label>
+            </th>
+            <th>
+                <label>Време на започнување</label>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.examId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.duration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.roomId)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.timeSlot.Date)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id">Детали</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
