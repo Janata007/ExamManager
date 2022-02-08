@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "2a79b809-1ff6-41b1-8e93-3d99b7ba06ee": {
+      "ProjectGuid": "2a79b809-1ff6-41b1-8e93-3d99b7ba06ee",
+      "DisplayName": "ExamManager.Domain",
+      "ColorIndex": 0
+    },
+    "d6ca96c2-c9b5-430d-a01e-98c386244e97": {
+      "ProjectGuid": "d6ca96c2-c9b5-430d-a01e-98c386244e97",
+      "DisplayName": "ExamManager.Web",
+      "ColorIndex": 1
+    },
+    "20e55476-70dd-4e15-abb3-070914dedb55": {
+      "ProjectGuid": "20e55476-70dd-4e15-abb3-070914dedb55",
+      "DisplayName": "ExamManager.Repository",
+      "ColorIndex": 2
+    },
+    "e7bed953-e7ee-4c80-9232-a44fbf853b56": {
+      "ProjectGuid": "e7bed953-e7ee-4c80-9232-a44fbf853b56",
+      "DisplayName": "ExamManager.Service",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}

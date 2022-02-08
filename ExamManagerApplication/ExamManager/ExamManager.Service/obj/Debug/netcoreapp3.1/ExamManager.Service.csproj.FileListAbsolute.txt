@@ -93,3 +93,19 @@ C:\Users\JMarkovikj\source\repos\ExamManagerProba\ExamManager\ExamManagerApplica
 C:\Users\JMarkovikj\source\repos\ExamManagerProba\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Service\obj\Debug\netcoreapp3.1\ExamManager.Service.csproj.CopyComplete
 C:\Users\JMarkovikj\source\repos\ExamManagerProba\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Service\obj\Debug\netcoreapp3.1\ExamManager.Service.dll
 C:\Users\JMarkovikj\source\repos\ExamManagerProba\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Service\obj\Debug\netcoreapp3.1\ExamManager.Service.pdb
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManager_new\ExamManagerApplication\ExamManager\ExamManager.Service\bin\Debug\netcoreapp3.1\Accord.dll.config
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManager_new\ExamManagerApplication\ExamManager\ExamManager.Service\bin\Debug\netcoreapp3.1\ExamManager.Service.deps.json
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManager_new\ExamManagerApplication\ExamManager\ExamManager.Service\bin\Debug\netcoreapp3.1\ExamManager.Service.dll
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManager_new\ExamManagerApplication\ExamManager\ExamManager.Service\bin\Debug\netcoreapp3.1\ExamManager.Service.pdb
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManager_new\ExamManagerApplication\ExamManager\ExamManager.Service\bin\Debug\netcoreapp3.1\ExamManager.Domain.dll
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManager_new\ExamManagerApplication\ExamManager\ExamManager.Service\bin\Debug\netcoreapp3.1\ExamManager.Repository.dll
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManager_new\ExamManagerApplication\ExamManager\ExamManager.Service\bin\Debug\netcoreapp3.1\ExamManager.Domain.pdb
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManager_new\ExamManagerApplication\ExamManager\ExamManager.Service\bin\Debug\netcoreapp3.1\ExamManager.Repository.pdb
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManager_new\ExamManagerApplication\ExamManager\ExamManager.Service\obj\Debug\netcoreapp3.1\ExamManager.Service.csproj.AssemblyReference.cache
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManager_new\ExamManagerApplication\ExamManager\ExamManager.Service\obj\Debug\netcoreapp3.1\ExamManager.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManager_new\ExamManagerApplication\ExamManager\ExamManager.Service\obj\Debug\netcoreapp3.1\ExamManager.Service.AssemblyInfoInputs.cache
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManager_new\ExamManagerApplication\ExamManager\ExamManager.Service\obj\Debug\netcoreapp3.1\ExamManager.Service.AssemblyInfo.cs
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManager_new\ExamManagerApplication\ExamManager\ExamManager.Service\obj\Debug\netcoreapp3.1\ExamManager.Service.csproj.CoreCompileInputs.cache
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManager_new\ExamManagerApplication\ExamManager\ExamManager.Service\obj\Debug\netcoreapp3.1\ExamManager.Service.csproj.CopyComplete
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManager_new\ExamManagerApplication\ExamManager\ExamManager.Service\obj\Debug\netcoreapp3.1\ExamManager.Service.dll
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManager_new\ExamManagerApplication\ExamManager\ExamManager.Service\obj\Debug\netcoreapp3.1\ExamManager.Service.pdb

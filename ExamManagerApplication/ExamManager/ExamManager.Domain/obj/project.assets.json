@@ -850,19 +850,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\JMarkovikj\\.nuget\\packages\\": {}
+    "C:\\Users\\Marija Kiprijanova\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JMarkovikj\\source\\repos\\ExamManagerProba\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManager_new\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj",
       "projectName": "ExamManager.Domain",
-      "projectPath": "C:\\Users\\JMarkovikj\\source\\repos\\ExamManagerProba\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj",
-      "packagesPath": "C:\\Users\\JMarkovikj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JMarkovikj\\source\\repos\\ExamManagerProba\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\obj\\",
+      "projectPath": "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManager_new\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj",
+      "packagesPath": "C:\\Users\\Marija Kiprijanova\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManager_new\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\JMarkovikj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Marija Kiprijanova\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -912,7 +912,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

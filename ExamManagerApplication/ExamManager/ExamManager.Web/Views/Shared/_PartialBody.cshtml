@@ -1,0 +1,65 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ExamManager.Domain.Identity.ApplicationUser> SignInManager
+@inject UserManager<ExamManager.Domain.Identity.ApplicationUser> UserManager
+<div class = "text-center">
+@if (SignInManager.IsSignedIn(User))
+{
+
+        <li class = "pb-3">
+        <a asp-area="" asp-controller="Predmets" asp-action="Index">Предмети</a>
+        </li>
+         <li class = "pb-3">
+        <a asp-area="" asp-controller="Termini" asp-action="Index">Термини</a>
+        </li>
+}
+else {
+    <div class="jumbotron" style="display: flex; align-items: start; justify-content: left; background-color:white">
+    <img src="~/img/tabetable-01.png" style= "height: 420px; width: 575px;"/>
+    <div style="position: relative; left: 60px; top: 100px">
+    <h1 style="color:#5296A5; font-size:400%" >Exam Manager</h1>
+    <p style="font-size: 150%">Scheduling exams at FSCE with ease.</p>
+    <ul>
+     <li class="list-item" style="display:inline-block">
+        <form class="register-link" asp-area="Identity" asp-page="/Account/Register">
+            <button type="submit" id="register">Register</button>
+            </form>
+    </li>
+    <li class="list-item" style="display:inline-block">
+        <form class="login-link" asp-area="Identity" asp-page="/Account/Login">
+            <button type="submit" id="login";">Login</button>
+            </form>
+            <style>
+#register {
+  border-color: #5296A5;
+  border-radius: 6px;
+  border-style: groove;
+  color: #fff;
+  background-color: #5296A5;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 10px 5px;
+  cursor: pointer;
+}
+#login {
+  border-color: #5296A5;
+  border-radius: 6px;
+  border-style: groove;
+  color: #5296A5;
+  background-color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 10px 10px;
+  cursor: pointer;
+}
+</style>
+    </li>
+    </ul>
+    </div>
+</div>
+}
+</div>
+
