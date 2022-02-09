@@ -1,0 +1,43 @@
+﻿@model ExamManager.Domain.DomainModel.Student
+
+@{
+    ViewData["Title"] = "Избриши студент";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Избриши предмет</h1>
+
+@*<h3>Дали сте сигурни дека сакате да го отстраните студентот од листата?</h3>*@
+<div>
+    
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @*@Html.DisplayNameFor(model => model.ImeNaPredmet)*@
+            <label>Индекс</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BrojNaIndeks)
+        </dd>
+        <dt class = "col-sm-2">
+            @*@Html.DisplayNameFor(model => model.Semestar)*@
+            <label>Име и презиме</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ImePrezime)
+        </dd>
+        <dt class = "col-sm-2">
+            @*@Html.DisplayNameFor(model => model.StudiskiCiklus)*@
+            <label>Термин</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TerminId)
+        </dd class>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="BrojNaIndeks" />
+        <input type="submit" value="Избриши студент" class="btn btn-danger" /> |
+        <a asp-action="Index">Назад кон листа на студенти</a>
+    </form>
+</div>

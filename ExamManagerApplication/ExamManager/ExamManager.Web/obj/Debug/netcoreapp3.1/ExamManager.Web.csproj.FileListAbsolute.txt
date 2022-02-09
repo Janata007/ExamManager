@@ -779,3 +779,15 @@ C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManager_new\ExamManagerApplicat
 C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManager_new\ExamManagerApplication\ExamManager\ExamManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Owin.Host.SystemWeb.dll
 C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManager_new\ExamManagerApplication\ExamManager\ExamManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Owin.Security.dll
 C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManager_new\ExamManagerApplication\ExamManager\ExamManager.Web\bin\Debug\netcoreapp3.1\Owin.dll
+C:\Users\JMarkovikj\Source\Repos\ExamManager1\ExamManagerApplication\ExamManager\ExamManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Owin.dll
+C:\Users\JMarkovikj\Source\Repos\ExamManager1\ExamManagerApplication\ExamManager\ExamManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\JMarkovikj\Source\Repos\ExamManager1\ExamManagerApplication\ExamManager\ExamManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Owin.Security.dll
+C:\Users\JMarkovikj\Source\Repos\ExamManager1\ExamManagerApplication\ExamManager\ExamManager.Web\bin\Debug\netcoreapp3.1\Owin.dll
+C:\Users\JMarkovikj\Source\Repos\ExamManager1\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_PartialBody.cshtml.g.cs
+C:\Users\JMarkovikj\Source\Repos\ExamManager1\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Termini\Details.cshtml.g.cs
+C:\Users\JMarkovikj\Source\Repos\ExamManager1\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Termini\Index.cshtml.g.cs
+C:\Users\JMarkovikj\Source\Repos\ExamManager1\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Studenti\Index.cshtml.g.cs
+C:\Users\JMarkovikj\Source\Repos\ExamManager1\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Studenti\Details.cshtml.g.cs
+C:\Users\JMarkovikj\Source\Repos\ExamManager1\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Studenti\Create.cshtml.g.cs
+C:\Users\JMarkovikj\Source\Repos\ExamManager1\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Studenti\Edit.cshtml.g.cs
+C:\Users\JMarkovikj\Source\Repos\ExamManager1\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Studenti\Delete.cshtml.g.cs

@@ -1,0 +1,42 @@
+﻿@model IEnumerable<ExamManager.Domain.DomainModel.Student>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Студенти</h1>
+
+<p>
+    <a asp-action="Create">Додај нов студент</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <label>Индекс</label>
+            </th>
+            <th>
+                <label>Име и презиме</label>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrojNaIndeks)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImePrezime)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.BrojNaIndeks">Измени</a> |
+                <a asp-action="Details" asp-route-id="@item.BrojNaIndeks">Детали</a> |
+                <a asp-action="Delete" asp-route-id="@item.BrojNaIndeks">Избриши</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
