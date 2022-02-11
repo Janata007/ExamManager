@@ -791,3 +791,8 @@ C:\Users\JMarkovikj\Source\Repos\ExamManager1\ExamManagerApplication\ExamManager
 C:\Users\JMarkovikj\Source\Repos\ExamManager1\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Studenti\Create.cshtml.g.cs
 C:\Users\JMarkovikj\Source\Repos\ExamManager1\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Studenti\Edit.cshtml.g.cs
 C:\Users\JMarkovikj\Source\Repos\ExamManager1\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Studenti\Delete.cshtml.g.cs
+C:\Users\JMarkovikj\Source\Repos\ExamManager1\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Prostorii\Create.cshtml.g.cs
+C:\Users\JMarkovikj\Source\Repos\ExamManager1\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Prostorii\Details.cshtml.g.cs
+C:\Users\JMarkovikj\Source\Repos\ExamManager1\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Prostorii\Edit.cshtml.g.cs
+C:\Users\JMarkovikj\Source\Repos\ExamManager1\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Prostorii\Index.cshtml.g.cs
+C:\Users\JMarkovikj\Source\Repos\ExamManager1\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Prostorii\Delete.cshtml.g.cs

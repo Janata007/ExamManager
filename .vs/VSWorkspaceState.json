@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ExamManagerApplication",
+    "\\ExamManagerApplication\\ExamManager",
+    "\\ExamManagerApplication\\ExamManager\\ExamManager.Web",
+    "\\ExamManagerApplication\\ExamManager\\ExamManager.Web\\Controllers"
   ],
-  "SelectedNode": "\\ExamManagerApplication.sln",
+  "SelectedNode": "\\ExamManagerApplication\\ExamManager\\ExamManager.Web\\Controllers\\StudentiController.cs",
   "PreviewInSolutionExplorer": false
 }

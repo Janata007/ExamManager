@@ -1,0 +1,47 @@
+﻿@model ExamManager.Domain.DomainModel.Prostorija
+
+@{
+    ViewData["Title"] = "Додај нова просторија";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Додај нова просторија</h1>
+
+@*<h4>Prostorija</h4>*@
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Код</label>
+                @*<label asp-for="ImeNaPredmet" class="control-label"></label>*@
+                <input asp-for="Id" class="form-control" readonly/>
+                <span asp-validation-for="Ime" class="text-danger"></span>
+            </div>
+                <div class="form-group">
+                <label class="control-label">Име</label>
+                @*<label asp-for="ImeNaPredmet" class="control-label"></label>*@
+                <input asp-for="Ime" class="form-control" />
+                <span asp-validation-for="Ime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Капацитет</label>
+                @*<label asp-for="Semestar" class="control-label"></label>*@
+                <input asp-for="Kapacitet" class="form-control"></input>
+                <span asp-validation-for="Kapacitet" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Додај" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Назад кон листа на простории</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
