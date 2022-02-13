@@ -29,6 +29,11 @@ namespace ExamManager.Service.Implementation
             this._predmetRepository.Delete(predmet);
         }
 
+        public List<Predmet> FilterPredmetiByName(string name)
+        {
+            return this._predmetRepository.FilterByName(name).ToList();
+        }
+
         public List<Predmet> GetAllPredmeti()
         {
             return this._predmetRepository.GetAll().ToList();

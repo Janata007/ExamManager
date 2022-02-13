@@ -1,0 +1,111 @@
+﻿@model List<ExamManager.Domain.DomainModel.Predmet>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div style="background-color: #F0F8FF ">
+    <div class="container pt-5">
+
+        <div class="pb-4 d-flex justify-content-between">
+            <i class="h1" style="color: #523a24">Предмети</i>
+            <a asp-action="Create" class="btn fw-bold pt-3 text-white" style="background-color: #523a24">Додади нов предмет</a>
+        </div>
+
+        <div class="pb-5 d-flex justify-content-between">
+            <form asp-action="Index" method="get" class="w-50">
+                <div class="input-group ">
+                    <input type="text" class="form-control" name="searchString" placeholder="Пребарај предмет...">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+            
+            <button class="btn btn-outline-dark fw-bold" type="button" data-toggle="modal" data-target="#importFileModal">
+                <i class="fa-solid fa-file-import"></i> Импортирај предмети
+            </button>
+             
+        </div>
+
+        @for (int i = 0; i < Model.Count; i++)
+        {
+
+            var item = Model[i];
+            if (i % 3 == 0)
+            {
+                @:<div class="row pb-3">
+                }
+
+                <div class="col-4">
+                    <div class="shadow-lg p-3 bg-white rounded d-flex align-items-start flex-column" style="height: 15rem;">
+                        <h5 class="pl-2 pt-2 fw-bold">
+                            @item.ImeNaPredmet
+                        </h5>
+                        <div class="pl-4 pt-2">
+                            <span>Код на предмет: @item.KodNaPredmet</span> <br>
+                            <span>Семестар: @item.Semestar</span> <br>
+                            <span>Студиски циклус: @item.StudiskiCiklus.CiklusNaStudii</span> <br>
+                        </div>
+                        <div class="pl-4 pb-2 mt-auto">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                
+
+                                <a class="btn" asp-action="Edit" asp-route-id="@item.KodNaPredmet"><i class="fa-solid fa-pen-to-square fa-xl pr-3 text-dark"></i></a>
+                                <a class="btn" asp-action="Details" asp-route-id="@item.KodNaPredmet"><i class="fa-solid fa-circle-info fa-xl pr-3 text-dark"></i></a>
+                                <form asp-action="Delete" asp-route-id="@item.KodNaPredmet">
+                                    <input type="hidden" asp-for="@item.KodNaPredmet" />
+                                    <button class="btn" type="submit"><i class="fa-solid fa-trash fa-xl text-dark"></i></button>
+                                </form>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                if (i % 3 == 2)
+                {
+                @:</div>
+            }
+
+        }
+
+      </div>
+</div>
+        
+<div class="modal fade" id="importFileModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Импортирај предмети</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form asp-controller="Predmeti" asp-action="ImportPredmeti" method="post" enctype="multipart/form-data">
+
+                    <div class="form-group">
+                        <input type="file" name="file" class="form-control w-100" />
+                    </div>
+
+                    <hr />
+
+                    <button type="submit" class="btn btn-outline-dark fw-bold w-100">Импортирај</button>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <span class="text-black-50">
+                    Документот треба да е со екстензија .xslx. Колоните треба да се по следниот редослед: код на предмет, име на предмет и семестар 
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -7,35 +7,36 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ExamManager.Domain.DomainModel;
 using ExamManager.Repository;
+using ExamManager.Service.Interface;
 
 namespace ExamManager.Web.Controllers
 {
     public class ProstoriiController : Controller
     {
-        private readonly ApplicationDbContext _context;
 
-        public ProstoriiController(ApplicationDbContext context)
+        private readonly IProstorijaService _prostoriiService;
+
+        public ProstoriiController(IProstorijaService prostorijaService)
         {
-            _context = context;
+            this._prostoriiService = prostorijaService;
         }
 
-        // GET: Prostorii
-        public async Task<IActionResult> Index()
+        //GET: Prostorii
+        public IActionResult Index()
         {
-            var applicationDbContext = _context.Prostorii;
-            return View(await applicationDbContext.ToListAsync());
+            var prostorii = _prostoriiService.GetAllProstorii();
+            return View(prostorii);
         }
-
         // GET: Prostorii/Details/5
-        public async Task<IActionResult> Details(Guid id)
+        public IActionResult Details(Guid id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var prostorija = await _context.Prostorii
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var prostorija = this._prostoriiService.GetDetailsForProstorija(id);
+
             if (prostorija == null)
             {
                 return NotFound();
@@ -47,51 +48,43 @@ namespace ExamManager.Web.Controllers
         // GET: Prostorii/Create
         public IActionResult Create()
         {
-            Prostorija pr = new Prostorija();
-            ViewData["Id"] = new SelectList(_context.Prostorii, pr);
             return View();
         }
 
         // POST: Prostorii/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Ime,Kapacitet")] Prostorija prostorija)
+        public IActionResult Create([Bind("Id,Ime,Kapacitet")] Prostorija prostorija)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(prostorija);
-                await _context.SaveChangesAsync();
+                this._prostoriiService.CreateNewProstorija(prostorija);
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["Id"] = new SelectList(_context.Studenti, "Id", "Id", prostorija.Id);
             return View(prostorija);
         }
 
         // GET: Prostorii/Edit/5
-        public async Task<IActionResult> Edit(Guid id)
+        public IActionResult Edit(Guid id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var prostorija = await _context.Prostorii.FindAsync(id);
+            var prostorija = this._prostoriiService.GetDetailsForProstorija(id);
             if (prostorija == null)
             {
                 return NotFound();
             }
-            ViewData["Id"] = new SelectList(_context.Prostorii, "Id", "Id", prostorija.Id);
+
             return View(prostorija);
         }
 
         // POST: Prostorii/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("Id,Ime,Kapacitet")] Prostorija prostorija)
+        public IActionResult Edit(Guid id, [Bind("Id,Ime,Kapacitet")] Prostorija prostorija)
         {
             if (id != prostorija.Id)
             {
@@ -102,8 +95,7 @@ namespace ExamManager.Web.Controllers
             {
                 try
                 {
-                    _context.Update(prostorija);
-                    await _context.SaveChangesAsync();
+                    this._prostoriiService.UpdateProstorija(prostorija);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -118,42 +110,25 @@ namespace ExamManager.Web.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["Id"] = new SelectList(_context.Prostorii, "Id", "Id", prostorija.Id);
-            return View(prostorija);
-        }
-
-        // GET: Prostorii/Delete/5
-        public async Task<IActionResult> Delete(Guid id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var prostorija = await _context.Prostorii
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (prostorija == null)
-            {
-                return NotFound();
-            }
-
             return View(prostorija);
         }
 
         // POST: Prostorii/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(Guid id)
+        public IActionResult DeleteConfirmed(Guid id)
         {
-            var prostorija = await _context.Prostorii.FindAsync(id);
-            _context.Prostorii.Remove(prostorija);
-            await _context.SaveChangesAsync();
+            if (id == null)
+            {
+                return NotFound();
+            }
+            this._prostoriiService.DeleteProstorija(id);
             return RedirectToAction(nameof(Index));
         }
 
         private bool ProstorijaExists(Guid id)
         {
-            return _context.Prostorii.Any(e => e.Id == id);
+            return this._prostoriiService.GetDetailsForProstorija(id) != null;
         }
     }
 }

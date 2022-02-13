@@ -1,12 +1,12 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @inject SignInManager<ExamManager.Domain.Identity.ApplicationUser> SignInManager
 @inject UserManager<ExamManager.Domain.Identity.ApplicationUser> UserManager
-<div class = "text-center">
+<div class = "text-center container">
 @if (SignInManager.IsSignedIn(User))
 {
 
         <li class = "pb-3">
-        <a asp-area="" asp-controller="Predmets" asp-action="Index">Предмети</a>
+        <a asp-area="" asp-controller="Predmeti" asp-action="Index">Предмети</a>
         </li>
          <li class = "pb-3">
         <a asp-area="" asp-controller="Termini" asp-action="Index">Термини</a>

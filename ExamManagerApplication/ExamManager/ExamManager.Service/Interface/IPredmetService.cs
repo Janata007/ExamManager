@@ -8,6 +8,7 @@ namespace ExamManager.Service.Interface
     public interface IPredmetService
     {
         List<Predmet> GetAllPredmeti();
+        List<Predmet> FilterPredmetiByName(string name);
 
         Predmet GetDetailsForPredemet(string id);
 

@@ -8,6 +8,7 @@ namespace ExamManager.Repository.Interface
     public interface IPredmetRepository
     {
         IEnumerable<Predmet> GetAll();
+        IEnumerable<Predmet> FilterByName(string name);
         Predmet Get(string  kodNaPredmet);
         void Insert(Predmet entity);
         void Update(Predmet entity);

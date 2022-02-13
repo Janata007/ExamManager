@@ -1,42 +1,58 @@
-﻿@model IEnumerable<ExamManager.Domain.DomainModel.Prostorija>
+﻿@model List<ExamManager.Domain.DomainModel.Prostorija>
 
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Простории</h1>
+<div style="background-color: #F0F8FF ">
+    <div class="container pt-5">
 
-<p>
-    <a asp-action="Create">Додај нова просторија</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                <label>Име</label>
-            </th>
-            <th>
-                <label>Капацитет</label>
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ime)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Kapacitet)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Измени</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Детали</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Избриши</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+        <div class="pb-5 d-flex justify-content-between">
+            <i class="h1" style="color: #523a24">Простории</i>
+            <a asp-action="Create" class="btn fw-bold pt-3 text-white" style="background-color: #523a24">Додади нова просторија</a>
+        </div>
+
+        @for (int i = 0; i < Model.Count; i++)
+        {
+
+            var item = Model[i];
+            if (i % 3 == 0)
+            {
+                @:<div class="row pb-3">
+                }
+
+                <div class="col-4">
+                    <div class="shadow-lg p-3 bg-white rounded d-flex align-items-start flex-column" style="height: 10rem;">
+                        <h5 class="pl-2 pt-2 fw-bold">
+                            @item.Ime
+                        </h5>
+                        <div class="pl-4 pt-2">
+                            <span>Капацитет на просторија: @item.Kapacitet</span> <br>
+                        </div>
+                        <div class="pl-4 pb-2 mt-auto">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+
+
+                                <a class="btn" asp-action="Edit" asp-route-id="@item.Id"><i class="fa-solid fa-pen-to-square fa-xl pr-3 text-dark"></i></a>
+                                <a class="btn" asp-action="Details" asp-route-id="@item.Id"><i class="fa-solid fa-circle-info fa-xl pr-3 text-dark"></i></a>
+                                <form asp-action="Delete" asp-route-id="@item.Id">
+                                    <input type="hidden" asp-for="@item.Id" />
+                                    <button class="btn" type="submit"><i class="fa-solid fa-trash fa-xl text-dark"></i></button>
+                                </form>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                if (i % 3 == 2)
+                {
+                @:</div>
+            }
+
+        }
+
+    </div>
+</div>

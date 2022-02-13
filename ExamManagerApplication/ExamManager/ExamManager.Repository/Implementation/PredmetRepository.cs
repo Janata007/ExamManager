@@ -21,7 +21,7 @@ namespace ExamManager.Repository.Implementation
 
         public IEnumerable<Predmet> GetAll()
         {
-            return entities.AsEnumerable();
+            return entities.Include(z=>z.StudiskiCiklus).AsEnumerable();
         }
 
         public Predmet Get(string kodNaPredmet)
@@ -61,6 +61,11 @@ namespace ExamManager.Repository.Implementation
             }
             entities.Remove(entity);
             context.SaveChanges();
+        }
+
+        public IEnumerable<Predmet> FilterByName(string name)
+        {
+            return this.entities.Where(z => z.ImeNaPredmet.Contains(name)).Include(z=>z.StudiskiCiklus).AsEnumerable();
         }
     }
 }
