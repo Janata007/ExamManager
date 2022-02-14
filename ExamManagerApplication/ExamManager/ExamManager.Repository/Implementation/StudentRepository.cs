@@ -30,7 +30,7 @@ namespace ExamManager.Repository.Implementation
                 .Include(z => z.StudentPolagaPredmeti)
                 .Include(z => z.StudentPolagaVoTermin)
                 .SingleOrDefault(z => z.BrojNaIndeks == id);
-                
+
         }
 
         public void Insert(Student entity)
@@ -61,6 +61,12 @@ namespace ExamManager.Repository.Implementation
             }
             entities.Remove(entity);
             context.SaveChanges();
+        }
+
+        public IEnumerable<Student> GetStudentiPaginated(int page)
+        {
+            int maxRows = 10;
+            return entities.OrderBy(z => z.BrojNaIndeks).Skip((page - 1) * maxRows).Take(maxRows).AsEnumerable();
         }
     }
 }

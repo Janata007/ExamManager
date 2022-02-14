@@ -22,5 +22,10 @@ namespace ExamManager.Repository.Implementation
             return entities.AsEnumerable();
 
         }
+
+        public IEnumerable<StudentPolagaPredmet> GetAllPredmetiForStudent(int id)
+        {
+            return entities.Where(z => z.BrojNaIndeks == id).Include(z => z.Predmet).AsEnumerable();
+        }
     }
 }

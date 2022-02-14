@@ -12,10 +12,11 @@ namespace ExamManager.Service.Implementation
     {
         private readonly IStudentRepository _studentRepository;
 
-        public StudentService(IStudentRepository studentRepository) {
+        public StudentService(IStudentRepository studentRepository)
+        {
 
             this._studentRepository = studentRepository;
-        
+
         }
 
         public void CreateNewStudent(Student s)
@@ -31,7 +32,7 @@ namespace ExamManager.Service.Implementation
 
         public List<Student> Getstudents()
         {
-          return  this._studentRepository.GetAll().ToList();
+            return this._studentRepository.GetAll().ToList();
         }
 
         public Student GetDetailsForStudent(int? id)
@@ -42,6 +43,11 @@ namespace ExamManager.Service.Implementation
         public void UpdateStudent(Student s)
         {
             this._studentRepository.Update(s);
+        }
+
+        public List<Student> GetStudentiPaginated(int page)
+        {
+            return this._studentRepository.GetStudentiPaginated(page).ToList();
         }
     }
 }

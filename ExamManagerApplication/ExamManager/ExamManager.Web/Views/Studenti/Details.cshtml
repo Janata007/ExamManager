@@ -5,32 +5,45 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Детали</h1>
+<div style="background-color: #F0F8FF">
+    <div class="container pt-5 pb-5">
+        <h1>Детали</h1>
 
-<div>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            <label>Индекс</label>
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.BrojNaIndeks)
-        </dd>
-        <dt class = "col-sm-2">
-            <label>Име и презиме</label>
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ImePrezime)
-        </dd>
-        <dt class = "col-sm-2">
-            <label>Спроведувач</label>
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.StudentPolagaVoTermin.SproveduvacId)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.BrojNaIndeks">Измени</a> |
-    <a asp-action="Index">Назад кон листа на студенти</a>
+        <div>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-4">
+                    <label>Индекс</label>
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.BrojNaIndeks)
+                </dd>
+                <dt class="col-sm-4">
+                    <label>Име и презиме</label>
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.ImePrezime)
+                </dd>
+                <dt class="col-sm-4">
+                    <label>Листа на предмети кои ги полага</label>
+                </dt>
+                <dd class="col-sm-8">
+                    <ul>
+                        @foreach (var predmet in Model.StudentPolagaPredmeti)
+                        {
+                            <li>
+                                <span>@predmet.Predmet.ImeNaPredmet</span>
+                            </li>
+                        }
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+
+        <div class="pt-3">
+
+            <a asp-action="Index"><i class="fa-solid fa-arrow-left fa-xl text-dark"> Назад кон листата на предмети</i></a>
+        </div>
+
+    </div>
 </div>

@@ -8,5 +8,6 @@ namespace ExamManager.Repository.Interface
     public interface IStudentPolagaPredmetRepository
     {
         IEnumerable<StudentPolagaPredmet> GetAll();
+        IEnumerable<StudentPolagaPredmet> GetAllPredmetiForStudent(int id);
     }
 }

@@ -7,153 +7,160 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ExamManager.Domain.DomainModel;
 using ExamManager.Repository;
+using ExamManager.Service.Interface;
+using Microsoft.AspNetCore.Http;
+using System.IO;
+using ExcelDataReader;
 
 namespace ExamManager.Web.Controllers
 {
     public class StudentiController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IStudentService _studentiService;
+        private readonly IStudentPolagaPredmetService _studentPolagaPredmetService;
 
-        public StudentiController(ApplicationDbContext context)
+        public StudentiController(IStudentService studentService, IStudentPolagaPredmetService studentPolagaPredmetService)
         {
-            _context = context;
+            this._studentiService = studentService;
+            this._studentPolagaPredmetService = studentPolagaPredmetService;
         }
 
         // GET: Studenti
-        public async Task<IActionResult> Index()
+        public IActionResult Index(int? page)
         {
-            var applicationDbContext = _context.Studenti;
-            return View(await applicationDbContext.ToListAsync());
+            var studenti = this._studentiService.Getstudents();
+            int totalPages = studenti.Count() / 10;
+            ViewData["totalPages"] = totalPages;
+            int currentPage = 1;
+            if (page != null)
+            {
+                studenti = this._studentiService.GetStudentiPaginated((int)page);
+                currentPage = (int)page;
+            }
+            else
+            {
+                studenti = this._studentiService.GetStudentiPaginated(1);
+            }
+            ViewData["currentPage"] = currentPage;
+            int startIndex = currentPage - 2;
+            int endIndex = currentPage + 2;
+            if (startIndex <= 0)
+            {
+                startIndex = 1;
+                endIndex = 5;
+            }
+            if (endIndex >= (totalPages + 1))
+            {
+                endIndex = totalPages + 1;
+                if ((endIndex - 5) > 0)
+                {
+                    startIndex = endIndex - 5;
+                }
+            }
+            ViewData["startIndex"] = startIndex;
+            ViewData["endIndex"] = endIndex;
+            return View(studenti);
         }
 
         // GET: Studenti/Details/5
-        public async Task<IActionResult> Details(int id)
+        public IActionResult Details(int id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var student = await _context.Studenti
-                .FirstOrDefaultAsync(m => m.BrojNaIndeks == id);
+            var student = this._studentiService.GetDetailsForStudent(id);
             if (student == null)
             {
                 return NotFound();
             }
-
+            student.StudentPolagaPredmeti = this._studentPolagaPredmetService.GetAllPredmetiForStudent(id);
             return View(student);
         }
 
-        // GET: Studenti/Create
-        public IActionResult Create()
-        {
-            Student st= new Student();
-            ViewData["BrojNaIndeks"] = new SelectList(_context.Studenti, st);
-            return View();
-        }
-
-        // POST: Studenti/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BrojNaIndeks,ImePrezime,TerminId,CustomTerminId")] Student student)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(student);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["BrojNaIndeks"] = new SelectList(_context.Studenti, "BrojNaIndeks", "BrojNaIndeks", student.BrojNaIndeks);
-            return View(student);
-        }
-
-        // GET: Studenti/Edit/5
-        public async Task<IActionResult> Edit(int id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var student = await _context.Studenti.FindAsync(id);
-            if (student == null)
-            {
-                return NotFound();
-            }
-            ViewData["BrojNaIndeks"] = new SelectList(_context.Studenti, "BrojNaIndeks", "BrojNaIndeks", student.BrojNaIndeks);
-            return View(student);
-        }
-
-        // POST: Studenti/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("BrojNaIndeks,ImePrezime,TerminId,CustomTerminId")] Student student)
-        {
-            if (id != student.BrojNaIndeks)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(student);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!StudentExists(student.BrojNaIndeks))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["BrojNaIndeks"] = new SelectList(_context.Studenti, "BrojNaIndeks", "BrojNaIndeks", student.BrojNaIndeks);
-            return View(student);
-        }
-
-        // GET: Studenti/Delete/5
-        public async Task<IActionResult> Delete(int id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var student = await _context.Studenti
-                .FirstOrDefaultAsync(m => m.BrojNaIndeks == id);
-            if (student == null)
-            {
-                return NotFound();
-            }
-
-            return View(student);
-        }
 
         // POST: Studenti/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var student = await _context.Studenti.FindAsync(id);
-            _context.Studenti.Remove(student);
-            await _context.SaveChangesAsync();
+            if (id == null)
+            {
+                return NotFound();
+            }
+            this._studentiService.DeleteStudent(id);
             return RedirectToAction(nameof(Index));
         }
 
         private bool StudentExists(int id)
         {
-            return _context.Studenti.Any(e => e.BrojNaIndeks == id);
+            return this._studentiService.GetDetailsForStudent(id) != null;
+        }
+
+        [HttpPost]
+        public IActionResult ImportStudenti(IFormFile file)
+        {
+            string pathToUpload = $"{Directory.GetCurrentDirectory()}\\Files\\{file.FileName}";
+
+            using (FileStream fileStream = System.IO.File.Create(pathToUpload))
+            {
+                file.CopyTo(fileStream);
+
+                fileStream.Flush();
+            }
+
+            List<Student> studenti = this.GetStudentiFromFile(file.FileName);
+
+            foreach (var item in studenti)
+            {
+                var predmetCheck = this.StudentExists(item.BrojNaIndeks);
+                if (!predmetCheck)
+                {
+                    this._studentiService.CreateNewStudent(item);
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            return RedirectToAction("Index", "Studenti");
+        }
+
+        private List<Student> GetStudentiFromFile(string fileName)
+        {
+            List<Student> studenti = new List<Student>();
+
+            string filePath = $"{Directory.GetCurrentDirectory()}\\Files\\{fileName}";
+
+            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+
+
+            using (var stream = System.IO.File.Open(filePath, FileMode.Open, FileAccess.Read))
+            {
+                using (var reader = ExcelReaderFactory.CreateReader(stream))
+                {
+                    while (reader.Read())
+                    {
+                        studenti.Add(new Student
+                        {
+                            ImePrezime = reader.GetValue(0).ToString()
+                        });
+                    }
+                }
+            }
+
+            return studenti;
+        }
+
+        public IActionResult DeleteAllStudents()
+        {
+            foreach (var student in _studentiService.Getstudents())
+            {
+                int id = student.BrojNaIndeks;
+                _studentiService.DeleteStudent(id);
+            }
+            return RedirectToAction("Index", "Studenti");
         }
     }
 }

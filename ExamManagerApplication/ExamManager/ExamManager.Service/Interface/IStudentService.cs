@@ -12,6 +12,8 @@ namespace ExamManager.Service.Interface
 
         Student GetDetailsForStudent(int? id);
 
+        List<Student> GetStudentiPaginated(int page);
+
         void CreateNewStudent(Student s);
         void UpdateStudent(Student s);
         void DeleteStudent(int? id);

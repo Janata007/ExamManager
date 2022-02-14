@@ -800,10 +800,7 @@ C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\
 C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Prostorii\Edit.cshtml.g.cs
 C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Prostorii\Index.cshtml.g.cs
 C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_PartialBody.cshtml.g.cs
-C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Studenti\Create.cshtml.g.cs
-C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Studenti\Delete.cshtml.g.cs
 C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Studenti\Details.cshtml.g.cs
-C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Studenti\Edit.cshtml.g.cs
 C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Studenti\Index.cshtml.g.cs
 C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Termini\Details.cshtml.g.cs
 C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Termini\Index.cshtml.g.cs

@@ -91,8 +91,11 @@
             <div class="modal-body">
                 <form asp-controller="Predmeti" asp-action="ImportPredmeti" method="post" enctype="multipart/form-data">
 
-                    <div class="form-group">
-                        <input type="file" name="file" class="form-control w-100" />
+                    <div class="input-group mb-3">
+                        <div class="custom-file">
+                            <input type="file" name="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                            <label class="custom-file-label" for="inputGroupFile01">Одбери документ</label>
+                        </div>
                     </div>
 
                     <hr />
