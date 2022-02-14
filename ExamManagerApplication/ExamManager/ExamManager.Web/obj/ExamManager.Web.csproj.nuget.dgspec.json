@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Web\\ExamManager.Web.csproj": {}
+    "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Web\\ExamManager.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj": {
+    "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj",
         "projectName": "ExamManager.Domain",
-        "projectPath": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj",
-        "packagesPath": "C:\\Users\\Simona\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\obj\\",
+        "projectPath": "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj",
+        "packagesPath": "C:\\Users\\Marija Kiprijanova\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Simona\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Marija Kiprijanova\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -64,21 +64,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Repository\\ExamManager.Repository.csproj": {
+    "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Repository\\ExamManager.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Repository\\ExamManager.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Repository\\ExamManager.Repository.csproj",
         "projectName": "ExamManager.Repository",
-        "projectPath": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Repository\\ExamManager.Repository.csproj",
-        "packagesPath": "C:\\Users\\Simona\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Repository\\obj\\",
+        "projectPath": "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Repository\\ExamManager.Repository.csproj",
+        "packagesPath": "C:\\Users\\Marija Kiprijanova\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Simona\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Marija Kiprijanova\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -92,8 +92,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj": {
-                "projectPath": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj"
+              "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj": {
+                "projectPath": "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj"
               }
             }
           }
@@ -144,21 +144,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Service\\ExamManager.Service.csproj": {
+    "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Service\\ExamManager.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Service\\ExamManager.Service.csproj",
+        "projectUniqueName": "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Service\\ExamManager.Service.csproj",
         "projectName": "ExamManager.Service",
-        "projectPath": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Service\\ExamManager.Service.csproj",
-        "packagesPath": "C:\\Users\\Simona\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Service\\obj\\",
+        "projectPath": "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Service\\ExamManager.Service.csproj",
+        "packagesPath": "C:\\Users\\Marija Kiprijanova\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Simona\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Marija Kiprijanova\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -172,11 +172,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj": {
-                "projectPath": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj"
+              "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj": {
+                "projectPath": "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj"
               },
-              "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Repository\\ExamManager.Repository.csproj": {
-                "projectPath": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Repository\\ExamManager.Repository.csproj"
+              "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Repository\\ExamManager.Repository.csproj": {
+                "projectPath": "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Repository\\ExamManager.Repository.csproj"
               }
             }
           }
@@ -215,21 +215,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Web\\ExamManager.Web.csproj": {
+    "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Web\\ExamManager.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Web\\ExamManager.Web.csproj",
+        "projectUniqueName": "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Web\\ExamManager.Web.csproj",
         "projectName": "ExamManager.Web",
-        "projectPath": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Web\\ExamManager.Web.csproj",
-        "packagesPath": "C:\\Users\\Simona\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Web\\obj\\",
+        "projectPath": "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Web\\ExamManager.Web.csproj",
+        "packagesPath": "C:\\Users\\Marija Kiprijanova\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Simona\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Marija Kiprijanova\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -243,14 +243,14 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj": {
-                "projectPath": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj"
+              "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj": {
+                "projectPath": "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj"
               },
-              "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Repository\\ExamManager.Repository.csproj": {
-                "projectPath": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Repository\\ExamManager.Repository.csproj"
+              "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Repository\\ExamManager.Repository.csproj": {
+                "projectPath": "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Repository\\ExamManager.Repository.csproj"
               },
-              "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Service\\ExamManager.Service.csproj": {
-                "projectPath": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Service\\ExamManager.Service.csproj"
+              "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Service\\ExamManager.Service.csproj": {
+                "projectPath": "C:\\Users\\Marija Kiprijanova\\Documents\\GitHub\\ExamManagerNew2\\ExamManagerApplication\\ExamManager\\ExamManager.Service\\ExamManager.Service.csproj"
               }
             }
           }
@@ -338,7 +338,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

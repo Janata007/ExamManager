@@ -67,3 +67,13 @@ C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManager_new\ExamManagerApplicat
 C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManager_new\ExamManagerApplication\ExamManager\ExamManager.Domain\obj\Debug\netcoreapp3.1\ExamManager.Domain.csproj.CoreCompileInputs.cache
 C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManager_new\ExamManagerApplication\ExamManager\ExamManager.Domain\obj\Debug\netcoreapp3.1\ExamManager.Domain.dll
 C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManager_new\ExamManagerApplication\ExamManager\ExamManager.Domain\obj\Debug\netcoreapp3.1\ExamManager.Domain.pdb
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManagerNew2\ExamManagerApplication\ExamManager\ExamManager.Domain\bin\Debug\netcoreapp3.1\ExamManager.Domain.deps.json
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManagerNew2\ExamManagerApplication\ExamManager\ExamManager.Domain\bin\Debug\netcoreapp3.1\ExamManager.Domain.dll
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManagerNew2\ExamManagerApplication\ExamManager\ExamManager.Domain\bin\Debug\netcoreapp3.1\ExamManager.Domain.pdb
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManagerNew2\ExamManagerApplication\ExamManager\ExamManager.Domain\obj\Debug\netcoreapp3.1\ExamManager.Domain.csproj.AssemblyReference.cache
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManagerNew2\ExamManagerApplication\ExamManager\ExamManager.Domain\obj\Debug\netcoreapp3.1\ExamManager.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManagerNew2\ExamManagerApplication\ExamManager\ExamManager.Domain\obj\Debug\netcoreapp3.1\ExamManager.Domain.AssemblyInfoInputs.cache
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManagerNew2\ExamManagerApplication\ExamManager\ExamManager.Domain\obj\Debug\netcoreapp3.1\ExamManager.Domain.AssemblyInfo.cs
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManagerNew2\ExamManagerApplication\ExamManager\ExamManager.Domain\obj\Debug\netcoreapp3.1\ExamManager.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManagerNew2\ExamManagerApplication\ExamManager\ExamManager.Domain\obj\Debug\netcoreapp3.1\ExamManager.Domain.dll
+C:\Users\Marija Kiprijanova\Documents\GitHub\ExamManagerNew2\ExamManagerApplication\ExamManager\ExamManager.Domain\obj\Debug\netcoreapp3.1\ExamManager.Domain.pdb

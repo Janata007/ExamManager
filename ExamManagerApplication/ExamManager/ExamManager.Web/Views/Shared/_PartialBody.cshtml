@@ -5,34 +5,69 @@
 @if (SignInManager.IsSignedIn(User))
 {
 
-        <li class = "pb-3">
-        <a asp-area="" asp-controller="Predmeti" asp-action="Index">Предмети</a>
-        </li>
-         <li class = "pb-3">
-        <a asp-area="" asp-controller="Termini" asp-action="Index">Термини</a>
-        </li>
-         <li class = "pb-3">
-        <a asp-area="" asp-controller="Studenti" asp-action="Index">Студенти</a>
-        </li>
-         <li class = "pb-3">
-        <a asp-area="" asp-controller="Prostorii" asp-action="Index">Простории</a>
-        </li>
+        <div id="main-div">
+        <div class="link-box">
+         <a class="link-kontroler" asp-area="" asp-controller="Predmeti" asp-action="Index">Предмети</a>
+        </div>
+         <div class = "link-box">
+        <a class="link-kontroler" asp-area="" asp-controller="Termini" asp-action="Index">Термини</a>
+        </div>
+         <div class = "link-box">
+        <a class="link-kontroler" asp-area="" asp-controller="Studenti" asp-action="Index">Студенти</a>
+        </div>
+         <div class = "link-box">
+        <a class="link-kontroler" asp-area="" asp-controller="Prostorii" asp-action="Index">Простории</a>
+        </div>
+        <div class = "link-box">
+        <a class="link-kontroler" asp-area="" asp-controller="Sproveduvaci" asp-action="Index">Спроведувачи</a>
+        </div>
+        <div class = "link-box">
+        <a class="link-kontroler" asp-area="" asp-action="Index">Закажи испит</a>
+        <!---treba da se dodad--->
+        </div>
+  
+        <style>
+            #main-div {
+                position: absolute;
+                width: 300px;
+                height: 200px;
+                z-index: 15;
+                top: 50%;
+                left: 50%;
+                margin: -260px 0 0 -150px;
+            }
+            .link-box {
+                width: 350px;
+                height: 70px;
+                background-color: #5296a5;
+                border-radius: 10px;
+                margin: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                }
+              .link-kontroler {
+                color: #fff;
+                font-size: 20px;
+              }
+        </style>
+        </div>
 }
 else {
     <div class="jumbotron" style="display: flex; align-items: start; justify-content: left; background-color:white">
     <img src="~/img/tabetable-01.png" style= "height: 420px; width: 575px;"/>
     <div style="position: relative; left: 60px; top: 100px">
     <h1 style="color:#5296A5; font-size:400%" >Exam Manager</h1>
-    <p style="font-size: 150%">Scheduling exams at FSCE with ease.</p>
+    <p style="font-size: 150%">Закажување испити на ФИНКИ.</p>
     <ul>
      <li class="list-item" style="display:inline-block">
         <form class="register-link" asp-area="Identity" asp-page="/Account/Register">
-            <button type="submit" id="register">Register</button>
+            <button type="submit" id="register">Регистрирај се</button>
             </form>
     </li>
     <li class="list-item" style="display:inline-block">
         <form class="login-link" asp-area="Identity" asp-page="/Account/Login">
-            <button type="submit" id="login";">Login</button>
+            <button type="submit" id="login";">Најави се</button>
             </form>
             <style>
 #register {
