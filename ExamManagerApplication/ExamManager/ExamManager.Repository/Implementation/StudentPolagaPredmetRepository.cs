@@ -25,7 +25,17 @@ namespace ExamManager.Repository.Implementation
 
         public IEnumerable<StudentPolagaPredmet> GetAllPredmetiForStudent(int id)
         {
-            return entities.Where(z => z.BrojNaIndeks == id).Include(z => z.Predmet).AsEnumerable();
+            return entities.Where(z => z.BrojNaIndeks == id).AsEnumerable();
+        }
+
+        public void Insert(StudentPolagaPredmet entity)
+        {
+            if (entity == null)
+            {
+                throw new ArgumentNullException("entity");
+            }
+            entities.Add(entity);
+            context.SaveChanges();
         }
     }
 }

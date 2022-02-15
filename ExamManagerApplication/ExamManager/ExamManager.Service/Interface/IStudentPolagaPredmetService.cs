@@ -10,5 +10,6 @@ namespace ExamManager.Service.Interface
     {
         List<StudentPredmetDTO> GetAll();
         List<StudentPolagaPredmet> GetAllPredmetiForStudent(int id);
+        void Insert(StudentPolagaPredmet studentPolagaPredmet);
     }
 }

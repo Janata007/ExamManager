@@ -29,10 +29,10 @@ namespace ExamManager.Web
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            
+
         }
 
-      
+
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -45,7 +45,6 @@ namespace ExamManager.Web
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-            services.AddScoped(typeof(IRepository<Termin>), typeof(Repository<Termin>));
             services.AddScoped(typeof(IPredmetRepository), typeof(PredmetRepository));
             services.AddScoped(typeof(ISproveduvacRepository), typeof(SproveduvacRepository));
             services.AddScoped(typeof(IStudentRepository), typeof(StudentRepository));
@@ -53,19 +52,18 @@ namespace ExamManager.Web
             services.AddScoped(typeof(IStudiskiCiklusRepository), typeof(StudiskiCiklusRepository));
             services.AddScoped(typeof(IStudiskaProgramaRepository), typeof(StudiskaProgramaRepository));
             services.AddScoped(typeof(IStudentPolagaPredmetRepository), typeof(StudentPolagaPredmetRepository));
-            services.AddSingleton(typeof(ICustomTerminUtil), typeof(CustomTerminUtil));
-        
+            services.AddScoped(typeof(IIspitRepository), typeof(IspitRepository));
+
 
             services.AddTransient<IPredmetService, PredmetService>();
-            services.AddTransient<ISproveduvacService, SproveduvacService > ();
+            services.AddTransient<ISproveduvacService, SproveduvacService>();
             services.AddTransient<IStudentService, StudentService>();
             services.AddTransient<IStudiskiCiklusService, StudiskiCiklusService>();
             services.AddTransient<IProstorijaService, ProstorijaService>();
             services.AddTransient<IIspitService, IspitService>();
             services.AddTransient<IStudentPolagaPredmetService, StudentPolagaPredmetService>();
             services.AddTransient<ITerminService, TerminService>();
-            services.AddTransient<ICustomTerminUtilService, CustomTerminUtilService>();
- 
+
             services.AddControllersWithViews();
             services.AddRazorPages();
         }

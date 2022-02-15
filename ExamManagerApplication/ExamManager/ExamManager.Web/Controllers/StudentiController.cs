@@ -11,6 +11,7 @@ using ExamManager.Service.Interface;
 using Microsoft.AspNetCore.Http;
 using System.IO;
 using ExcelDataReader;
+using System.Diagnostics;
 
 namespace ExamManager.Web.Controllers
 {
@@ -18,11 +19,13 @@ namespace ExamManager.Web.Controllers
     {
         private readonly IStudentService _studentiService;
         private readonly IStudentPolagaPredmetService _studentPolagaPredmetService;
+        private readonly IPredmetService _predmetService;
 
-        public StudentiController(IStudentService studentService, IStudentPolagaPredmetService studentPolagaPredmetService)
+        public StudentiController(IStudentService studentService, IStudentPolagaPredmetService studentPolagaPredmetService, IPredmetService predmetService)
         {
             this._studentiService = studentService;
             this._studentPolagaPredmetService = studentPolagaPredmetService;
+            this._predmetService = predmetService;
         }
 
         // GET: Studenti
@@ -75,7 +78,12 @@ namespace ExamManager.Web.Controllers
             {
                 return NotFound();
             }
-            student.StudentPolagaPredmeti = this._studentPolagaPredmetService.GetAllPredmetiForStudent(id);
+            var tmp = this._studentPolagaPredmetService.GetAllPredmetiForStudent(id);
+            foreach(var t in tmp)
+            {
+                t.Predmet = this._predmetService.GetDetailsForPredmetByKod(t.KodNaPredmet);
+            }
+            student.StudentPolagaPredmeti = tmp;
             return View(student);
         }
 
@@ -151,6 +159,62 @@ namespace ExamManager.Web.Controllers
             }
 
             return studenti;
+        }
+
+        [HttpPost]
+        public IActionResult ImportStudentsAndSubjects(IFormFile file)
+        {
+            string pathToUpload = $"{Directory.GetCurrentDirectory()}\\Files\\{file.FileName}";
+
+            using (FileStream fileStream = System.IO.File.Create(pathToUpload))
+            {
+                file.CopyTo(fileStream);
+
+                fileStream.Flush();
+            }
+
+            List < StudentPolagaPredmet > studentiPredmeti = this.GetStudentsAndSubjects(file.FileName);
+
+            foreach(var item in studentiPredmeti)
+            {
+                this._studentPolagaPredmetService.Insert(item);
+            }
+            return RedirectToAction("Index", "Studenti");
+        }
+
+
+        private List<StudentPolagaPredmet> GetStudentsAndSubjects(string fileName)
+        {
+            List<StudentPolagaPredmet> studentiPredmeti = new List<StudentPolagaPredmet>();
+
+            string filePath = $"{Directory.GetCurrentDirectory()}\\Files\\{fileName}";
+
+            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+
+
+            using (var stream = System.IO.File.Open(filePath, FileMode.Open, FileAccess.Read))
+            {
+                using (var reader = ExcelReaderFactory.CreateReader(stream))
+                {
+                    while (reader.Read())
+                    {
+                        int indeks = int.Parse(reader.GetValue(0).ToString());
+                        string[] predmeti = reader.GetValue(1).ToString().Split(",").Select(p => p.Trim())
+                                                                                    .Where(p => !string.IsNullOrWhiteSpace(p))
+                                                                                    .ToArray();
+                        foreach (string p in predmeti)
+                        {
+                            studentiPredmeti.Add(new StudentPolagaPredmet
+                            {
+                                BrojNaIndeks = indeks,
+                                KodNaPredmet = p
+                            });
+                        }
+                    }
+                }
+            }
+
+            return studentiPredmeti;
         }
 
         public IActionResult DeleteAllStudents()

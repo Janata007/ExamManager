@@ -3669,19 +3669,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\JMarkovikj\\.nuget\\packages\\": {}
+    "C:\\Users\\Simona\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JMarkovikj\\Source\\Repos\\ExamManager1\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj",
       "projectName": "ExamManager.Domain",
-      "projectPath": "C:\\Users\\JMarkovikj\\Source\\Repos\\ExamManager1\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj",
-      "packagesPath": "C:\\Users\\JMarkovikj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JMarkovikj\\Source\\Repos\\ExamManager1\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\obj\\",
+      "projectPath": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj",
+      "packagesPath": "C:\\Users\\Simona\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\JMarkovikj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Simona\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3735,7 +3735,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -21,15 +21,13 @@ namespace ExamManager.Web.Controllers
         private readonly IIspitService _ispitService;
         private readonly IStudentPolagaPredmetService _studentPolagaPredmetService;
         private readonly ISproveduvacService _sproveduvacService;
-        private readonly ICustomTerminUtilService _customTerminUtilService;
 
-        public ApiController(ICustomTerminUtilService customTerminUtilService,IProstorijaService prostorijaService, IIspitService ispitService, IStudentPolagaPredmetService studentPolagaPredmetService, ISproveduvacService sproveduvacService)
+        public ApiController(IProstorijaService prostorijaService, IIspitService ispitService, IStudentPolagaPredmetService studentPolagaPredmetService, ISproveduvacService sproveduvacService)
         {
             _prostorijaService = prostorijaService;
             _ispitService = ispitService;
             _studentPolagaPredmetService = studentPolagaPredmetService;
             _sproveduvacService = sproveduvacService;
-            _customTerminUtilService = customTerminUtilService;
         }
 
         [HttpGet("[action]")]
@@ -61,7 +59,7 @@ namespace ExamManager.Web.Controllers
         {
             return this._ispitService.GetAllTerminiZaIspiti();
         }
-
+        /*
         [HttpPost("[action]")]
         public HttpResponseMessage receiveScheduledExams([FromBody] RootObject schedule)
         {
@@ -82,6 +80,6 @@ namespace ExamManager.Web.Controllers
             Debug.WriteLine("TERMIN 1 DURATION API CONTROLLER:" + _customTerminUtilService.GetAllTermini().Find(p => p.Id ==0).duration);
 
             return new HttpResponseMessage(HttpStatusCode.OK);
-        }
+        }*/
     }
 }

@@ -12,8 +12,11 @@ namespace ExamManager.Service.Implementation
     public class IspitService : IIspitService
     {
         private readonly IRepository<Ispit> _ispitRepository;
-        public IspitService(IRepository<Ispit> ispitRepository) {
+        private readonly IIspitRepository _detailsRepository;
+
+        public IspitService(IRepository<Ispit> ispitRepository, IIspitRepository repository) {
             _ispitRepository = ispitRepository;
+            this._detailsRepository = repository;
         }
         public void CreateNewIspit(Ispit i)
         {
@@ -48,7 +51,7 @@ namespace ExamManager.Service.Implementation
 
         public Ispit GetDetailsForIspit(Guid? id)
         {
-            return this._ispitRepository.Get(id);
+            return this._detailsRepository.GetDetailsForIspit(id);
         }
 
         public List<IspitDTO> GetlAllIspitDto()

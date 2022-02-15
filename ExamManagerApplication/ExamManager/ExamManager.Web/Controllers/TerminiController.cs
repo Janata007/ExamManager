@@ -12,6 +12,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
+using ClosedXML.Excel;
 using System.Threading.Tasks;
 
 
@@ -24,9 +25,8 @@ namespace ExamManager.Web.Controllers
         private readonly IStudentService _studentService;
         private readonly ISproveduvacService _sproveduvacService;
         private readonly IProstorijaService _prostorijaService;
-        private readonly ICustomTerminUtilService _customTerminUtilService;
 
-        public TerminiController(ITerminService terminService, IIspitService ispitService, IStudentService studentService,ISproveduvacService sproveduvacService, IProstorijaService prostorijaService)
+        public TerminiController(ITerminService terminService, IIspitService ispitService, IStudentService studentService, ISproveduvacService sproveduvacService, IProstorijaService prostorijaService)
         {
             this._terminService = terminService;
             this._ispitService = ispitService;
@@ -67,15 +67,26 @@ namespace ExamManager.Web.Controllers
                     startIndex = endIndex - 5;
                 }
             }
+            List<DisplayTermin> displayTermini = new List<DisplayTermin>();
+            foreach (var ter in termini)
+            {
+                displayTermini.Add(new DisplayTermin
+                {
+                    TerminId = ter.Id,
+                    Predmet = ter.Predmet,
+                    DatumNaPolaganje = ter.VremeNaZapocnuvanje.Date.ToString("dd/MM/yyyy"),
+                    BrojNaTermini = this._terminService.GetBrojNaTermini(ter.Predmet)
+                });
+            }
             ViewData["startIndex"] = startIndex;
             ViewData["endIndex"] = endIndex;
-            return View(termini);
+            return View(displayTermini);
         }
 
         // GET: GenerateScheduleForExams
         public async Task<ActionResult> GenerateScheduleForExams()
         {
-            
+
             HttpClient client = new HttpClient();
 
             string URI = "http://127.0.0.1:5000/";
@@ -86,51 +97,100 @@ namespace ExamManager.Web.Controllers
 
             Schedule schedule = JsonConvert.DeserializeObject<Schedule>(result);
 
-            foreach(var t in schedule.schedule)
+            foreach (var t in schedule.schedule)
             {
-                Debug.WriteLine("DEZUREN ID: " + t.teacherId);
-                Termin termin = new Termin
+                this._terminService.CreateNewTermin(new Termin
                 {
                     VremeNaZapocnuvanje = t.timeSlot,
                     VremeNaZavrshuvanje = t.timeSlot.AddMinutes(t.duration),
                     Predmet = this._ispitService.GetDetailsForIspit(t.examId).IspitPoPredmet.ImeNaPredmet,
-                    StudentiPolagaatVoTermin = "",
+                    StudentiPolagaatVoTermin = string.Join(",", t.students),
                     Dezuren = t.teacherId,
                     Prostorija = t.roomId
-
-                };
-                //this._terminService.CreateNewTermin(termin);
+                });
             }
 
             return RedirectToAction("Index");
         }
         // GET: TerminiController/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(string predmet)
         {
-
-            if (id == null)
+            if (predmet == null)
             {
                 return NotFound();
             }
-            CustomTermin termin = this._customTerminUtilService.GetDetailsForTermin(id);
-            List<int> indeksi = termin.students;
-            List<Student> students = new List<Student>();
-            foreach (int i in indeksi)
+            List<Termin> termini = this._terminService.GetAllTerminiForPredmet(predmet);
+
+            return View(termini);
+        }
+
+        public IActionResult DeleteAllTermini()
+        {
+            foreach (var termin in this._terminService.GetAllTermini())
             {
-                students.Add(this._studentService.GetDetailsForStudent(i));
+                Guid id = termin.Id;
+                this._terminService.DeleteTermin(id);
+            }
+            return RedirectToAction("Index", "Termini");
+        }
+
+        [HttpGet]
+        public FileContentResult ExportTermini(string id)
+        {
+            string fileName = "Termini " + id + ".xlsx";
+            string contentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+            Debug.WriteLine("export");
+            using (var workbook = new XLWorkbook())
+            {
+                IXLWorksheet worksheet = workbook.Worksheets.Add("Termini");
+
+                var termini = this._terminService.GetAllTerminiForPredmet(id);
+
+                worksheet.Cell(1, 1).Value = "Предмет";
+                worksheet.Cell(1, 2).Value = id;
+
+                int row = 2;
+                for (int i = 0; i < termini.Count; i++)
+                {
+                    var item = termini[i];
+                    worksheet.Cell(row, 1).Value = "Термин" + (i + 1);
+                    row++;
+                    worksheet.Cell(row, 1).Value = "Датум на полагање: " + item.VremeNaZapocnuvanje.Date.ToString("dd/MM/yyyy");
+                    row += 2;
+                    worksheet.Cell(row, 1).Value = "Студент";
+                    worksheet.Cell(row, 2).Value = "Просторија";
+                    worksheet.Cell(row, 3).Value = "Професор";
+                    worksheet.Cell(row, 4).Value = "Почеток на полагање";
+                    worksheet.Cell(row, 5).Value = "Крај на полагање";
+                    row++;
+                    var studenti = item.StudentiPolagaatVoTermin.Split(",");
+                    string from = item.VremeNaZapocnuvanje.ToString("HH:mm");
+                    string to = item.VremeNaZavrshuvanje.ToString("HH:mm");
+                    for (int j = 0; j < studenti.Length; j++)
+                    {
+                        worksheet.Cell(row, 1).Value = studenti[j];
+                        worksheet.Cell(row, 2).Value = item.Prostorija;
+                        worksheet.Cell(row, 3).Value = item.Dezuren;
+                        worksheet.Cell(row, 4).Value = from;
+                        worksheet.Cell(row, 5).Value = to;
+                        row++;
+                    }
+
+                    row += 2;
+
+
+                }
+
+                using (var stream = new MemoryStream())
+                {
+                    workbook.SaveAs(stream);
+                    var content = stream.ToArray();
+
+                    return File(content, contentType, fileName);
+                }
             }
 
-            Vkupen vkupen = new Vkupen(termin, students);
-            return View(vkupen);
         }
 
-        //GET: Termini/Predmeti
-        public List<string> Predmeti()
-        {
-            return new List<string>()
-            {
-                "test", "test1", "test3", "testing"
-            };
-        }
     }
 }

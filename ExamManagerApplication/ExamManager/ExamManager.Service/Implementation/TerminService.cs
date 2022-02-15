@@ -22,9 +22,25 @@ namespace ExamManager.Service.Implementation
             this._terminiRepository.Insert(t);
         }
 
+        public void DeleteTermin(Guid id)
+        {
+            var termin = this.GetDetailsForTermin(id);
+            this._terminiRepository.Delete(termin);
+        }
+
         public List<Termin> GetAllTermini()
         {
             return this._terminiRepository.GetAll().ToList();
+        }
+
+        public List<Termin> GetAllTerminiForPredmet(string KodNaPredmet)
+        {
+            return this._terminiRepository.GetAll().Where(t => t.Predmet == KodNaPredmet).ToList();
+        }
+
+        public int GetBrojNaTermini(string KodNaPredmet)
+        {
+            return this._terminiRepository.GetAll().Where(t => t.Predmet == KodNaPredmet).Count();
         }
 
         public Termin GetDetailsForTermin(Guid id)

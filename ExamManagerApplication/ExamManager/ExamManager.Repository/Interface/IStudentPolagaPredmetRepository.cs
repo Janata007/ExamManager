@@ -9,5 +9,6 @@ namespace ExamManager.Repository.Interface
     {
         IEnumerable<StudentPolagaPredmet> GetAll();
         IEnumerable<StudentPolagaPredmet> GetAllPredmetiForStudent(int id);
+        void Insert(StudentPolagaPredmet studentPolagaPredmet);
     }
 }

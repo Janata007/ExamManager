@@ -16,6 +16,7 @@ namespace ExamManager.Service.Interface
         void UpdatePredmet(Predmet p);
         void DeletePredmet(string id);
 
+        Predmet GetDetailsForPredmetByKod(string Kod);
 
     }
 }

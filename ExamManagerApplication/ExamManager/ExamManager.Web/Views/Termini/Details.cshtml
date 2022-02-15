@@ -1,53 +1,75 @@
-﻿@model ExamManager.Domain.DomainModel.Vkupen
+﻿@model List<ExamManager.Domain.DomainModel.Termin>
 
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Термини</h1>
+<div style="background-color: #F0F8FF">
+    <div class="container pt-5 pb-5">
+        <div class="pb-2 d-flex justify-content-between">
+            <i class="h1" style="color: #523a24">Детали за термин</i>
+            <div class="pb-4 pt-3 d-flex justify-content-end">
+                <a class="btn btn-outline-dark fw-bold pr-3" asp-controller="Termini" asp-route-id="@Model.ElementAt(0).Predmet" asp-action="ExportTermini">
+                    <i class="fa-solid fa-file-export"></i> Експортирај го распоредот
+                </a>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                <label>Испит</label>
-            </th>
-            <th>
-                <label>Времетраење</label>
-            </th>
-            <th>
-                <label>Просторија</label>
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => Model.customTermin.examId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.customTermin.duration)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.customTermin.roomId)
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label><b>Студенти</b></label>
-            </td>
-        </tr>
-       @foreach (var item in Model.students) {
-        <tr>
-            <td>
-                 @Html.DisplayFor(modelItem => item.BrojNaIndeks)
-            </td>
-            <td>
-                 @Html.DisplayFor(modelItem => item.ImePrezime)
-            </td>
-        </tr>
-       }
 
-    </tbody>
-</table>
+            </div>
+        </div>
+
+        <hr />
+
+        @foreach (var item in Model)
+        {
+            <dl class="row pb-5">
+                <dt class="col-3">
+                    <label>Предмет</label>
+                </dt>
+                <dd class="col-9">
+                    <span>@item.Predmet</span>
+                </dd>
+
+                <dt class="col-3">
+                    <label>Време на започнување</label>
+                </dt>
+                <dd class="col-9">
+                    <span>@item.VremeNaZapocnuvanje</span>
+                </dd>
+
+                <dt class="col-3">
+                    <label>Време на завршување</label>
+                </dt>
+                <dd class="col-9">
+                    <span>@item.VremeNaZavrshuvanje</span>
+                </dd>
+
+                <dt class="col-3">
+                    <label>Дежурен професор</label>
+                </dt>
+                <dd class="col-9">
+                    <span>@item.Dezuren</span>
+                </dd>
+
+                <dt class="col-3">
+                    <label>Просторија</label>
+                </dt>
+                <dd class="col-9">
+                    <span>@item.Prostorija</span>
+                </dd>
+
+                <dt class="col-3">
+                    <label>Студенти</label>
+                </dt>
+                <dd class="col-9">
+                    <span>@item.StudentiPolagaatVoTermin</span>
+                </dd>
+            </dl>
+        }
+
+        <div>
+            <a asp-action="Index"><i class="fa-solid fa-arrow-left fa-xl text-dark"> Назад кон листата на термини</i></a>
+        </div>
+    </div>
+
+</div>

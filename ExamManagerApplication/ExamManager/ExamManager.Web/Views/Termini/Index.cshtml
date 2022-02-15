@@ -1,4 +1,4 @@
-﻿@model List<ExamManager.Domain.DomainModel.Termin>
+﻿@model List<ExamManager.Domain.DTO.DisplayTermin>
 
 @{
     ViewData["Title"] = "Index";
@@ -25,9 +25,11 @@
                 </div>
             </form>
 
-            <button class="btn btn-outline-dark fw-bold" type="button" data-toggle="modal" data-target="#importFileModal">
-                <i class="fa-solid fa-file-export"></i> Експортирај го распоредот
-            </button>
+            <form asp-action="DeleteAllTermini" class="pl-4">
+                <button class="btn btn-outline-dark fw-bold" type="submit">
+                    <i class="fa-solid fa-calendar-xmark"></i> Избриши ги сите термини
+                </button>
+            </form>
 
         </div>
 
@@ -39,19 +41,10 @@
                         <label>Испит по предмет</label>
                     </th>
                     <th>
-                        <label>Време на започнување</label>
+                        <label>Датум на полагање</label>
                     </th>
                     <th>
-                        <label>Време на завршување</label>
-                    </th>
-                    <th>
-                        <label>Просторија</label>
-                    </th>
-                    <th>
-                        <label>Професор</label>
-                    </th>
-                    <th>
-                        <label>Број на студенти</label>
+                        <label>Број на термини</label>
                     </th>
                     <th></th>
                 </tr>
@@ -59,31 +52,20 @@
             <tbody>
                 @foreach (var item in Model)
                 {
-                <tr>
-                    @*
-        <td>
-            @Html.DisplayFor(modelItem => item.ispitId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.VremeNaZapocnuvanje)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.VremeNaZavrshuvanje)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProstorijaId)
-        </td>
-        <td>
-           @Html.DisplayFor(modelItem => item.SproveduvacId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.StudentiPolagaatVoTermin.Count)
-        </td>
-        <td>
-            <a class="btn" asp-action="Details" asp-route-id="@item.Id"><i class="fa-solid fa-circle-info fa-xl pr-3 text-dark"></i></a>
-        </td>
-                    *@
-                </tr>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Predmet)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DatumNaPolaganje)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BrojNaTermini)
+                        </td>
+                        <td>
+                            <a class="btn" asp-action="Details" asp-route-predmet="@item.Predmet"><i class="fa-solid fa-circle-info fa-xl pr-3 text-dark"></i></a>
+                        </td>
+                    </tr>
                 }
             </tbody>
         </table>
@@ -119,26 +101,3 @@
     </div>
 </div>
 
-
-@section scripts{
-    <script>
-        $(document).ready(function () {
-            $("#searchSubjects").autocomplete({
-                minLength: 1,
-                source: function (request, response) {
-                    $.ajax({
-                        method: "GET",
-                        url: "/Termini/Predmeti",
-                        success: function (data) {
-                            alert("OK")
-                            response(data.d);
-                        },
-                        error: function (result) {
-                            alert("No Match");
-                        }
-                    });
-            })
-            
-        });
-    </script>
-}

@@ -13,6 +13,8 @@ namespace ExamManager.Service.Interface
         Termin GetDetailsForTermin(Guid id);
 
         void CreateNewTermin(Termin t);
-
+        void DeleteTermin(Guid id);
+        int GetBrojNaTermini(string KodNaPredmet);
+        List<Termin> GetAllTerminiForPredmet(string KodNaPredmet);
     }
 }

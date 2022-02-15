@@ -44,6 +44,11 @@ namespace ExamManager.Service.Implementation
             return this._predmetRepository.Get(id);
         }
 
+        public Predmet GetDetailsForPredmetByKod(string Kod)
+        {
+            return this._predmetRepository.GetAll().Where(p => p.KodNaPredmet == Kod).FirstOrDefault();
+        }
+
         public void UpdatePredmet(Predmet p)
         {
             this._predmetRepository.Update(p);

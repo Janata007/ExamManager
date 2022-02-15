@@ -12,6 +12,7 @@ namespace ExamManager.Service.Implementation
     public class StudentPolagaPredmetService : IStudentPolagaPredmetService
     {
         private readonly IStudentPolagaPredmetRepository studentPolagaPredmetRepository;
+       
 
         public StudentPolagaPredmetService(IStudentPolagaPredmetRepository studentPolagaPredmetRepository)
         {
@@ -26,6 +27,11 @@ namespace ExamManager.Service.Implementation
         public List<StudentPolagaPredmet> GetAllPredmetiForStudent(int id)
         {
             return this.studentPolagaPredmetRepository.GetAllPredmetiForStudent(id).ToList();
+        }
+
+        public void Insert(StudentPolagaPredmet studentPolagaPredmet)
+        {
+            this.studentPolagaPredmetRepository.Insert(studentPolagaPredmet);
         }
     }
 }

@@ -412,11 +412,11 @@ def mutate_chromosome(chromosome, mutate_fields):
 # the number of generations (random number between 10 and 20), mutation_probability decimal number from 0 to 1
 def GeneticAlgorithm(population=None, generations=None, mutation_probability=None):
     if generations is None:
-        generations = rnd.randint(10, 20)
+        generations = rnd.randint(1, 3)
     if mutation_probability is None:
         mutation_probability = rnd.random()  # [0,1)
     if population is None:
-        population = Population(size=3)
+        population = Population(size=2)
 
     # Calculating fitness
     for chromosome in population.chromosomes:
