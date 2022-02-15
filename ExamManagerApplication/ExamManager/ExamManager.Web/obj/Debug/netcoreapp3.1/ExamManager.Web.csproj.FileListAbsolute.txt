@@ -1371,3 +1371,6 @@ C:\Users\Marija Kiprijanova\source\repos\ExamManager2\ExamManagerApplication\Exa
 C:\Users\Marija Kiprijanova\source\repos\ExamManager2\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Sproveduvaci\Create.cshtml.g.cs
 C:\Users\Marija Kiprijanova\source\repos\ExamManager2\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Sproveduvaci\Details.cshtml.g.cs
 C:\Users\Marija Kiprijanova\source\repos\ExamManager2\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Sproveduvaci\Index.cshtml.g.cs
+C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Sproveduvaci\Create.cshtml.g.cs
+C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Sproveduvaci\Details.cshtml.g.cs
+C:\Users\Simona\Documents\GitHub\ExamManager\ExamManagerApplication\ExamManager\ExamManager.Web\obj\Debug\netcoreapp3.1\Razor\Views\Sproveduvaci\Index.cshtml.g.cs

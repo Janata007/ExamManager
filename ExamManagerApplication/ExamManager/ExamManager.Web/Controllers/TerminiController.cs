@@ -36,7 +36,7 @@ namespace ExamManager.Web.Controllers
         }
 
         //GET: Index
-        public IActionResult Index(int? page)
+        public IActionResult Index(int? page, string? searchSubjects)
         {
             var termini = this._terminService.GetAllTermini();
             int totalPages = termini.Count() / 10;
@@ -50,6 +50,10 @@ namespace ExamManager.Web.Controllers
             else
             {
                 termini = this._terminService.GetTerminiPaginated(1);
+            }
+            if(searchSubjects != null)
+            {
+                termini = termini.Where(t => t.Predmet.Contains(searchSubjects)).ToList();
             }
             ViewData["currentPage"] = currentPage;
             int startIndex = currentPage - 2;
