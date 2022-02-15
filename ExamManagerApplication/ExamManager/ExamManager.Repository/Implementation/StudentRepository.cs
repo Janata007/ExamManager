@@ -28,7 +28,6 @@ namespace ExamManager.Repository.Implementation
         {
             return entities
                 .Include(z => z.StudentPolagaPredmeti)
-                .Include(z => z.StudentPolagaVoTermin)
                 .SingleOrDefault(z => z.BrojNaIndeks == id);
 
         }
@@ -67,6 +66,11 @@ namespace ExamManager.Repository.Implementation
         {
             int maxRows = 10;
             return entities.OrderBy(z => z.BrojNaIndeks).Skip((page - 1) * maxRows).Take(maxRows).AsEnumerable();
+        }
+
+        public IEnumerable<Student> GetDetailsForStudentWithId(List<int> ids)
+        {
+            return entities.Where(z => ids.Contains(z.BrojNaIndeks)).AsEnumerable();
         }
     }
 }

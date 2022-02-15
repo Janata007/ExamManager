@@ -48,5 +48,15 @@ namespace ExamManager.Service.Implementation
         {
             return this._prostoriiRepository.GetAll().Select(z => new ProstorijaDTO { Prostorija = z.Ime, Kapacitet = z.Kapacitet }).ToList();
         }
+
+        public Guid GetProstorijaByName(string name)
+        {
+            return this._prostoriiRepository.GetAll().Where(p => p.Ime.Equals(name)).Select(p => p.Id).FirstOrDefault();
+        }
+
+        public Prostorija GetDetailsForProstorijaByName(string name)
+        {
+            return this._prostoriiRepository.GetAll().Where(p => p.Ime.Equals(name)).FirstOrDefault();
+        }
     }
 }

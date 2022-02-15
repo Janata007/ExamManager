@@ -1,31 +1,44 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @inject SignInManager<ExamManager.Domain.Identity.ApplicationUser> SignInManager
 @inject UserManager<ExamManager.Domain.Identity.ApplicationUser> UserManager
-<div class = "text-center container">
-@if (SignInManager.IsSignedIn(User))
-{
+<div class="text-center container">
+    @if (SignInManager.IsSignedIn(User))
+    {
+    <div class="pt-5">
+        <div class="row mb-5">
+            <div class="col mr-5 link-box">
+                <a class="btn link-kontroler" asp-area="" asp-controller="Predmeti" asp-action="Index">
+                    <i class="fa-solid fa-laptop-code "></i> <br /> Предмети</a>
+            </div>
 
-        <div id="main-div">
-        <div class="link-box">
-         <a class="link-kontroler" asp-area="" asp-controller="Predmeti" asp-action="Index">Предмети</a>
+            <div class="col mr-5 link-box">
+                <a class="btn link-kontroler" asp-area="" asp-controller="Termini" asp-action="Index">
+                    <i class="fa-solid fa-clock"></i> <br /> Термини</a>
+            </div>
+
+            <div class="col link-box">
+                <a class="btn link-kontroler" asp-area="" asp-controller="Studenti" asp-action="Index">
+                    <i class="fa-solid fa-graduation-cap"></i> <br /> Студенти</a>
+            </div>
         </div>
-         <div class = "link-box">
-        <a class="link-kontroler" asp-area="" asp-controller="Termini" asp-action="Index">Термини</a>
+
+        <div class="row mb-5">
+            <div class="col mr-5 link-box">
+                <a class="btn link-kontroler" asp-area="" asp-controller="Prostorii" asp-action="Index">
+                    <i class="fa-solid fa-building-columns"></i> <br />Простории</a>
+            </div>
+
+            <div class="col mr-5 link-box">
+                <a class="btn link-kontroler" asp-area="" asp-controller="Sproveduvaci" asp-action="Index">
+                    <i class="fa-solid fa-user-group"></i> <br />Спроведувачи</a>
+            </div>
+
+            <div class="col link-box">
+                <a class="btn link-kontroler" asp-area="" asp-controller="Termini" asp-action="GenerateScheduleForExams">
+                    <i class="fa-solid fa-calendar-days"></i> <br />Генерирај термини</a>
+            </div>
         </div>
-         <div class = "link-box">
-        <a class="link-kontroler" asp-area="" asp-controller="Studenti" asp-action="Index">Студенти</a>
-        </div>
-         <div class = "link-box">
-        <a class="link-kontroler" asp-area="" asp-controller="Prostorii" asp-action="Index">Простории</a>
-        </div>
-        <div class = "link-box">
-        <a class="link-kontroler" asp-area="" asp-controller="Sproveduvaci" asp-action="Index">Спроведувачи</a>
-        </div>
-        <div class = "link-box">
-        <a class="link-kontroler" asp-area="" asp-action="Index">Закажи испит</a>
-        <!---treba da se dodad--->
-        </div>
-  
+
         <style>
             #main-div {
                 position: absolute;
@@ -36,71 +49,75 @@
                 left: 50%;
                 margin: -260px 0 0 -150px;
             }
+
             .link-box {
-                width: 350px;
-                height: 70px;
+                height: 200px;
                 background-color: #5296a5;
                 border-radius: 10px;
-                margin: 20px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                }
-              .link-kontroler {
+            }
+
+            .link-kontroler {
+                
                 color: #fff;
-                font-size: 20px;
-              }
+                font-size: 40px;
+            }
         </style>
-        </div>
-}
-else {
-    <div class="jumbotron" style="display: flex; align-items: start; justify-content: left; background-color:white">
-    <img src="~/img/tabetable-01.png" style= "height: 420px; width: 575px;"/>
-    <div style="position: relative; left: 60px; top: 100px">
-    <h1 style="color:#5296A5; font-size:400%" >Exam Manager</h1>
-    <p style="font-size: 150%">Закажување испити на ФИНКИ.</p>
-    <ul>
-     <li class="list-item" style="display:inline-block">
-        <form class="register-link" asp-area="Identity" asp-page="/Account/Register">
-            <button type="submit" id="register">Регистрирај се</button>
-            </form>
-    </li>
-    <li class="list-item" style="display:inline-block">
-        <form class="login-link" asp-area="Identity" asp-page="/Account/Login">
-            <button type="submit" id="login";">Најави се</button>
-            </form>
-            <style>
-#register {
-  border-color: #5296A5;
-  border-radius: 6px;
-  border-style: groove;
-  color: #fff;
-  background-color: #5296A5;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 20px;
-  margin: 10px 5px;
-  cursor: pointer;
-}
-#login {
-  border-color: #5296A5;
-  border-radius: 6px;
-  border-style: groove;
-  color: #5296A5;
-  background-color: #fff;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 20px;
-  margin: 10px 10px;
-  cursor: pointer;
-}
-</style>
-    </li>
-    </ul>
     </div>
-</div>
-}
+
+    }
+    else
+    {
+        <div class="jumbotron" style="display: flex; align-items: start; justify-content: left; background-color:white">
+            <img src="~/img/tabetable-01.png" style="height: 420px; width: 575px;" />
+            <div style="position: relative; left: 60px; top: 100px">
+                <h1 style="color:#5296A5; font-size:400%">Exam Manager</h1>
+                <p style="font-size: 150%">Закажување испити на ФИНКИ.</p>
+                <ul>
+                    <li class="list-item" style="display:inline-block">
+                        <form class="register-link" asp-area="Identity" asp-page="/Account/Register">
+                            <button type="submit" id="register">Регистрирај се</button>
+                        </form>
+                    </li>
+                    <li class="list-item" style="display:inline-block">
+                        <form class="login-link" asp-area="Identity" asp-page="/Account/Login">
+                            <button type="submit" id="login" ;">Најави се</button>
+                        </form>
+                        <style>
+                            #register {
+                                border-color: #5296A5;
+                                border-radius: 6px;
+                                border-style: groove;
+                                color: #fff;
+                                background-color: #5296A5;
+                                padding: 10px 20px;
+                                text-align: center;
+                                text-decoration: none;
+                                font-size: 20px;
+                                margin: 10px 5px;
+                                cursor: pointer;
+                            }
+
+                            #login {
+                                border-color: #5296A5;
+                                border-radius: 6px;
+                                border-style: groove;
+                                color: #5296A5;
+                                background-color: #fff;
+                                padding: 10px 20px;
+                                text-align: center;
+                                text-decoration: none;
+                                font-size: 20px;
+                                margin: 10px 10px;
+                                cursor: pointer;
+                            }
+                        </style>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    }
 </div>
 

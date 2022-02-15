@@ -10,6 +10,5 @@ namespace ExamManager.Domain.DomainModel
 
         public int Kapacitet { get; set; }
 
-        public virtual ICollection<Termin> ProstijaVoKojaSeRealiziraTermin { get; set; } 
     }
 }

@@ -13,6 +13,7 @@ namespace ExamManager.Service.Interface
         Student GetDetailsForStudent(int? id);
 
         List<Student> GetStudentiPaginated(int page);
+        List<Student> GetDetailsForStudentWithId(List<int> ids);
 
         void CreateNewStudent(Student s);
         void UpdateStudent(Student s);

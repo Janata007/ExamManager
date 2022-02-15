@@ -12,6 +12,8 @@ namespace ExamManager.Service.Interface
         List<ProstorijaDTO> GetAllProstoriiDTO();
 
         Prostorija GetDetailsForProstorija(Guid id);
+        Guid GetProstorijaByName(string name);
+        Prostorija GetDetailsForProstorijaByName(string name);
 
         void CreateNewProstorija(Prostorija p);
         void UpdateProstorija(Prostorija p);

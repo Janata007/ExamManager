@@ -9,6 +9,7 @@ namespace ExamManager.Repository.Interface
     {
         IEnumerable<Student> GetAll();
         IEnumerable<Student> GetStudentiPaginated(int page);
+        IEnumerable<Student> GetDetailsForStudentWithId(List<int> ids);
         Student Get(int? id);
         void Insert(Student entity);
         void Update(Student entity);

@@ -62,6 +62,7 @@ namespace ExamManager.Web
             services.AddTransient<IProstorijaService, ProstorijaService>();
             services.AddTransient<IIspitService, IspitService>();
             services.AddTransient<IStudentPolagaPredmetService, StudentPolagaPredmetService>();
+            services.AddTransient<ITerminService, TerminService>();
             services.AddTransient<ICustomTerminUtilService, CustomTerminUtilService>();
  
             services.AddControllersWithViews();

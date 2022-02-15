@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "69AIpX5KZYr8O12ecgxJbXkqr/kpMkQW/7kKlfr1WdFKRmbO/gCszm60LFxOoNvcN2b7v85XU4wBOTriV7P/6g==",
+  "dgSpecHash": "BN/VAGuLORhC/xcfhhGU0CV92CWOgcUYPUfDv0SM4sEl6AtfxoVVve7gJv7EJ8+YEUX3+iXkJz0Z5UBYiAcmwA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Service\\ExamManager.Service.csproj",
   "expectedPackageFiles": [
@@ -99,7 +99,7 @@
     "C:\\Users\\Simona\\.nuget\\packages\\system.io.packaging\\4.0.0\\system.io.packaging.4.0.0.nupkg.sha512",
     "C:\\Users\\Simona\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
     "C:\\Users\\Simona\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
-    "C:\\Users\\Simona\\.nuget\\packages\\system.net.http\\4.3.0\\system.net.http.4.3.0.nupkg.sha512",
+    "C:\\Users\\Simona\\.nuget\\packages\\system.net.http\\4.3.1\\system.net.http.4.3.1.nupkg.sha512",
     "C:\\Users\\Simona\\.nuget\\packages\\system.net.nameresolution\\4.3.0\\system.net.nameresolution.4.3.0.nupkg.sha512",
     "C:\\Users\\Simona\\.nuget\\packages\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Simona\\.nuget\\packages\\system.net.sockets\\4.3.0\\system.net.sockets.4.3.0.nupkg.sha512",

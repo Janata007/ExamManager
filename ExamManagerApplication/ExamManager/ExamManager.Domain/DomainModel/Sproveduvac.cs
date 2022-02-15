@@ -12,6 +12,5 @@ namespace ExamManager.Domain.DomainModel
 
         public string ImePrezime { get; set; }
 
-        public virtual Termin SproveduvacDezuraVoTermin { get; set; }
     }
 }

@@ -14,8 +14,6 @@ namespace ExamManager.Domain.DomainModel
 
         public int BrojNaTermin { get; set; }
 
-        public virtual ICollection<Termin> IspitSePolagaVoTermini { get; set; }
-
         public string KodNaPredmet { get; set; }
         public virtual Predmet IspitPoPredmet { get; set; }
 

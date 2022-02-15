@@ -49,5 +49,10 @@ namespace ExamManager.Service.Implementation
         {
             return this._studentRepository.GetStudentiPaginated(page).ToList();
         }
+
+        public List<Student> GetDetailsForStudentWithId(List<int> ids)
+        {
+            return this._studentRepository.GetDetailsForStudentWithId(ids).ToList();
+        }
     }
 }

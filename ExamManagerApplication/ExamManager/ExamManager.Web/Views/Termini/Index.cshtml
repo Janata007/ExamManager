@@ -1,49 +1,144 @@
-﻿@model IEnumerable<ExamManager.Domain.DomainModel.CustomTermin>
+﻿@model List<ExamManager.Domain.DomainModel.Termin>
 
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Термини</h1>
+<div style="background-color: #F0F8FF ">
+    <div class="container pt-5">
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                <label>Испит</label>
-            </th>
-            <th>
-                <label>Времетраење</label>
-            </th>
-            <th>
-                <label>Просторија</label>
-            </th>
-            <th>
-                <label>Време на започнување</label>
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.examId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.duration)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.roomId)
-            </td>
-             <td>
-                @Html.DisplayFor(modelItem => item.timeSlot.Date)
-            </td>
-            <td>
-                <a asp-action="Details" asp-route-id="@item.Id">Детали</a>
-            </td>
-        </tr>
+        <div class="pb-5 d-flex justify-content-between">
+            <i class="h1" style="color: #523a24">Термини</i>
+        </div>
+
+        <div class="pb-5 d-flex justify-content-between">
+            <form asp-action="Index" method="get" class="w-50">
+                <div class="input-group ">
+                    <input type="text" class="form-control" id="searchSubjects" name="searchSubjects" placeholder="Пребарај предмет...">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit">
+                            <i class="fa-solid fa-filter"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+
+            <button class="btn btn-outline-dark fw-bold" type="button" data-toggle="modal" data-target="#importFileModal">
+                <i class="fa-solid fa-file-export"></i> Експортирај го распоредот
+            </button>
+
+        </div>
+
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        <label>Испит по предмет</label>
+                    </th>
+                    <th>
+                        <label>Време на започнување</label>
+                    </th>
+                    <th>
+                        <label>Време на завршување</label>
+                    </th>
+                    <th>
+                        <label>Просторија</label>
+                    </th>
+                    <th>
+                        <label>Професор</label>
+                    </th>
+                    <th>
+                        <label>Број на студенти</label>
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    @*
+        <td>
+            @Html.DisplayFor(modelItem => item.ispitId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VremeNaZapocnuvanje)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VremeNaZavrshuvanje)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProstorijaId)
+        </td>
+        <td>
+           @Html.DisplayFor(modelItem => item.SproveduvacId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentiPolagaatVoTermin.Count)
+        </td>
+        <td>
+            <a class="btn" asp-action="Details" asp-route-id="@item.Id"><i class="fa-solid fa-circle-info fa-xl pr-3 text-dark"></i></a>
+        </td>
+                    *@
+                </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="table-pagination pb-5">
+            <ul class="pagination justify-content-center">
+                <li class="@(ViewBag.currentPage == 1 ? "page-item disabled" : "page-item")">
+                    <a class="page-link" asp-action="Index" asp-route-page=@(ViewBag.currentPage - 1)>Previous</a>
+                </li>
+
+                @for (int i = ViewBag.startIndex; i <= ViewBag.endIndex; i++)
+                {
+                    <li class="@(ViewBag.currentPage == i ? "page-item active" : "page-item")">
+                        @if (ViewBag.currentPage == i)
+                        {
+                            <a class="page-link" href="javascript:void(0);">@i</a>
+                        }
+                        else
+                        {
+                            <a class="page-link" asp-action="Index" asp-route-page=@i>@i</a>
+                        }
+                    </li>
+                }
+
+                <li class="@(ViewBag.currentPage + 1 > ViewBag.totalPages +1 ? "page-item disabled" : "page-item")">
+                    <a class="page-link" asp-action="Index" asp-route-page=@(ViewBag.currentPage + 1)>Next</a>
+                </li>
+
+
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $("#searchSubjects").autocomplete({
+                minLength: 1,
+                source: function (request, response) {
+                    $.ajax({
+                        method: "GET",
+                        url: "/Termini/Predmeti",
+                        success: function (data) {
+                            alert("OK")
+                            response(data.d);
+                        },
+                        error: function (result) {
+                            alert("No Match");
+                        }
+                    });
+            })
+            
+        });
+    </script>
 }
-    </tbody>
-</table>

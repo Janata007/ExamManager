@@ -10,15 +10,12 @@ namespace ExamManager.Domain.DomainModel
         
         public DateTime VremeNaZavrshuvanje { get; set; }
 
-        public Guid ispitId { get; set; }
-        public virtual Ispit TerminVoKojSePolagaIspit { get; set; }
+        public string Predmet { get; set; }
 
-        public virtual ICollection<Student> StudentiPolagaatVoTermin { get; set; }
+        public string StudentiPolagaatVoTermin { get; set; }
 
-        public string SproveduvacId { get; set; }
-        public virtual Sproveduvac DezurenSproveduvacVoTermin { get; set; }
+        public string Dezuren { get; set; }
 
-        public Guid ProstorijaId { get; set; }
-        public virtual Prostorija TerminSeRealiziraVoProstija { get; set; }
+        public string Prostorija { get; set; }
     }
 }

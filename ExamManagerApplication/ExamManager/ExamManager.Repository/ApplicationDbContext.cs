@@ -59,13 +59,13 @@ namespace ExamManager.Repository
             builder.Entity<Student>()
                      .Property(z => z.BrojNaIndeks)
                     .ValueGeneratedOnAdd();
-
+            /*
             builder.Entity<Student>()
                 .HasOne(z => z.StudentPolagaVoTermin)
                 .WithMany(z => z.StudentiPolagaatVoTermin)
                 .HasForeignKey(z => z.TerminId)
                 .IsRequired(false);
-
+            */
             builder.Entity<StudiskaPrograma>()
                 .Property(z=>z.ImeNaStudiskaPrograma)
                 .ValueGeneratedOnAdd();
@@ -78,6 +78,7 @@ namespace ExamManager.Repository
                 .Property(z=>z.Id)
                 .ValueGeneratedOnAdd();
 
+            /*
             builder.Entity<Termin>()
                 .HasOne(z => z.TerminVoKojSePolagaIspit)
                 .WithMany(z => z.IspitSePolagaVoTermini)
@@ -91,7 +92,7 @@ namespace ExamManager.Repository
             builder.Entity<Termin>()
                 .HasOne(z => z.TerminSeRealiziraVoProstija)
                 .WithMany(z => z.ProstijaVoKojaSeRealiziraTermin)
-                .HasForeignKey(z => z.ProstorijaId);
+                .HasForeignKey(z => z.ProstorijaId);*/
 
             builder.Entity<PredmetOdStudiskaPrograma>()
                 .HasKey(z => new { z.KodNaPredmet, z.ImeNaStudiskaPrograma });
@@ -109,6 +110,7 @@ namespace ExamManager.Repository
             builder.Entity<StudentPolagaPredmet>()
                 .HasKey(z => new { z.BrojNaIndeks, z.KodNaPredmet });
 
+            /*
             builder.Entity<StudentPolagaPredmet>()
                 .HasOne(z => z.Student)
                 .WithMany(z => z.StudentPolagaPredmeti)
@@ -117,7 +119,7 @@ namespace ExamManager.Repository
             builder.Entity<StudentPolagaPredmet>()
                 .HasOne(z => z.Predmet)
                 .WithMany(z => z.StudentiKoiPolagaatPredmet)
-                .HasForeignKey(z => z.KodNaPredmet);
+                .HasForeignKey(z => z.KodNaPredmet);*/
             
             builder.ApplyConfiguration(new StudiskiCiklusConfiguration());
             builder.ApplyConfiguration(new StudiskaProgramaConfiguration());

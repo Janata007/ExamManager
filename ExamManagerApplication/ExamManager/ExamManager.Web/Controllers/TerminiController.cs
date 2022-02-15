@@ -1,36 +1,109 @@
 ﻿using ExamManager.Domain.DomainModel;
+using ExamManager.Domain.DTO;
 using ExamManager.Repository;
 using ExamManager.Repository.Implementation;
 using ExamManager.Service.Interface;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
+
 
 namespace ExamManager.Web.Controllers
 {
     public class TerminiController : Controller
     {
-        private readonly ICustomTerminUtilService _customTerminUtilService;
+        private readonly ITerminService _terminService;
+        private readonly IIspitService _ispitService;
         private readonly IStudentService _studentService;
-        private readonly ApplicationDbContext _context;
+        private readonly ISproveduvacService _sproveduvacService;
+        private readonly IProstorijaService _prostorijaService;
+        private readonly ICustomTerminUtilService _customTerminUtilService;
 
-        public TerminiController(IStudentService studentService, ICustomTerminUtilService customTerminUtilService, ApplicationDbContext context) { 
-        _customTerminUtilService = customTerminUtilService;
-            _context = context;
-            _studentService = studentService;
+        public TerminiController(ITerminService terminService, IIspitService ispitService, IStudentService studentService,ISproveduvacService sproveduvacService, IProstorijaService prostorijaService)
+        {
+            this._terminService = terminService;
+            this._ispitService = ispitService;
+            this._studentService = studentService;
+            this._sproveduvacService = sproveduvacService;
+            this._prostorijaService = prostorijaService;
         }
 
-        // GET: TerminiController
-        public async Task<ActionResult> Index()
+        //GET: Index
+        public IActionResult Index(int? page)
         {
-           this._customTerminUtilService.invokePost();
-            List<CustomTermin> termini = this._customTerminUtilService.GetAllTermini();
-            Debug.WriteLine("TERMINI VO TERMINI KONTROLER: " + termini.Count);
+            var termini = this._terminService.GetAllTermini();
+            int totalPages = termini.Count() / 10;
+            ViewData["totalPages"] = totalPages;
+            int currentPage = 1;
+            if (page != null)
+            {
+                termini = this._terminService.GetTerminiPaginated((int)page);
+                currentPage = (int)page;
+            }
+            else
+            {
+                termini = this._terminService.GetTerminiPaginated(1);
+            }
+            ViewData["currentPage"] = currentPage;
+            int startIndex = currentPage - 2;
+            int endIndex = currentPage + 2;
+            if (startIndex <= 0)
+            {
+                startIndex = 1;
+                endIndex = 5;
+            }
+            if (endIndex >= (totalPages + 1))
+            {
+                endIndex = totalPages + 1;
+                if ((endIndex - 5) > 0)
+                {
+                    startIndex = endIndex - 5;
+                }
+            }
+            ViewData["startIndex"] = startIndex;
+            ViewData["endIndex"] = endIndex;
             return View(termini);
         }
 
+        // GET: GenerateScheduleForExams
+        public async Task<ActionResult> GenerateScheduleForExams()
+        {
+            
+            HttpClient client = new HttpClient();
+
+            string URI = "http://127.0.0.1:5000/";
+
+            HttpResponseMessage responseMessage = client.GetAsync(URI).Result;
+
+            var result = await responseMessage.Content.ReadAsStringAsync();
+
+            Schedule schedule = JsonConvert.DeserializeObject<Schedule>(result);
+
+            foreach(var t in schedule.schedule)
+            {
+                Debug.WriteLine(t.teacherId);
+                Termin termin = new Termin
+                {
+                    VremeNaZapocnuvanje = t.timeSlot,
+                    VremeNaZavrshuvanje = t.timeSlot.AddMinutes(t.duration),
+                    Predmet = this._ispitService.GetDetailsForIspit(t.examId).IspitPoPredmet.ImeNaPredmet,
+                    StudentiPolagaatVoTermin = "",
+                    Dezuren = t.teacherId,
+                    Prostorija = t.roomId
+
+                };
+                //this._terminService.CreateNewTermin(termin);
+            }
+
+            return RedirectToAction("Index");
+        }
         // GET: TerminiController/Details/5
         public ActionResult Details(int id)
         {
@@ -42,7 +115,8 @@ namespace ExamManager.Web.Controllers
             CustomTermin termin = this._customTerminUtilService.GetDetailsForTermin(id);
             List<int> indeksi = termin.students;
             List<Student> students = new List<Student>();
-            foreach (int i in indeksi) {
+            foreach (int i in indeksi)
+            {
                 students.Add(this._studentService.GetDetailsForStudent(i));
             }
 
@@ -50,67 +124,13 @@ namespace ExamManager.Web.Controllers
             return View(vkupen);
         }
 
-        // GET: TerminiController/Create
-        public ActionResult Create()
+        //GET: Termini/Predmeti
+        public List<string> Predmeti()
         {
-            return View();
-        }
-
-        // POST: TerminiController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
+            return new List<string>()
             {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: TerminiController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: TerminiController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: TerminiController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: TerminiController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+                "test", "test1", "test3", "testing"
+            };
         }
     }
 }
