@@ -1,14 +1,14 @@
 ﻿@model ExamManager.Domain.DomainModel.Predmet
 
 @{
-    ViewData["Title"] = "Додади нов предмет";
+    ViewData["Title"] = "Додај нов предмет";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div style="background-color: #F0F8FF; height:100%" >
     <div class="container pt-5 h-100 pb-5">
 
-        <h1>Додади нов предмет</h1>
+        <h1>Додај нов предмет</h1>
 
 
         <hr />
@@ -39,7 +39,7 @@
                         <select asp-for="StudiskiCiklusId" class="form-control" asp-items="ViewBag.StudiskiCiklusId"></select>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Додади" class="btn btn-lg text-white mt-2" style="background-color: #523a24" />
+                        <input type="submit" value="Додај" class="btn btn-lg text-white mt-2" style="background-color: #523a24" />
                     </div>
                 </form>
             </div>

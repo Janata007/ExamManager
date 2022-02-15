@@ -1,0 +1,23 @@
+﻿@model ExamManager.Domain.DomainModel.Sproveduvac
+
+@{
+    ViewData["Title"] = "Детали";
+}
+<div style="background-color: #F0F8FF">
+    <div class="container pt-5 pb-5">
+<h1>Детали</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-4">
+           <label>Име и презиме</label>
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.ImePrezime)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index"><i class="fa-solid fa-arrow-left fa-xl text-dark"> Назад кон листата на спроведувачи</i></a>
+</div>

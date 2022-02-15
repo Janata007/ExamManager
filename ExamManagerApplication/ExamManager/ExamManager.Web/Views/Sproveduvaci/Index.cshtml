@@ -1,0 +1,91 @@
+﻿@model IEnumerable<ExamManager.Domain.DomainModel.Sproveduvac>
+
+@{
+    ViewData["Title"] = "Спроведувачи";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="background-color: #F0F8FF ">
+    <div class="container pt-5">
+
+        <div class="pb-4 d-flex justify-content-between">
+            <i class="h1" style="color: #0c263d">Спроведувачи</i>
+            <a asp-action="Create" class="btn fw-bold pt-3 text-white" style="background-color: #0c263d">Додај нов спроведувач</a>
+    </div>
+      @if (Model.Count() == 0)
+        {
+            <div class="text-center">
+                <span class="h2">
+                    Нема записи за спроведувачи. Обидете се да импортирате информации за студенти со цел да Ви се прикажат записи.
+                </span>
+            </div>
+        }
+        else
+            {
+                 <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            <label>Име и презиме</label>
+                        </th>
+                        <th>
+                            <label>ID на спроведувач</label>
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ImePrezime)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SproveduvacId)
+                            </td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+
+                                    <a class="btn" asp-action="Details" asp-route-id="@item.SproveduvacId"><i class="fa-solid fa-circle-info fa-xl pr-3 text-dark"></i></a>
+                                    <form asp-action="Delete" asp-route-id="@item.SproveduvacId">
+                                        <input type="hidden" asp-for="@item.SproveduvacId" />
+                                        <button class="btn" type="submit"><i class="fa-solid fa-trash fa-xl text-dark"></i></button>
+                                    </form>
+
+                                </div>
+                            </td>
+                        </tr>
+            }
+            </tbody>
+            </table>
+             <div class="table-pagination pb-5">
+                <ul class="pagination justify-content-center">
+                    <li class="@(ViewBag.currentPage == 1 ? "page-item disabled" : "page-item")">
+                        <a class="page-link" asp-action="Index" asp-route-page=@(ViewBag.currentPage - 1)>Назад</a>
+                    </li>
+
+                    @for (int i = ViewBag.startIndex; i <= ViewBag.endIndex; i++)
+                    {
+                        <li class="@(ViewBag.currentPage == i ? "page-item active" : "page-item")">
+                            @if (ViewBag.currentPage == i)
+                            {
+                                <a class="page-link" href="javascript:void(0);">@i</a>
+                            }
+                            else
+                            {
+                                <a class="page-link" asp-action="Index" asp-route-page=@i>@i</a>
+                            }
+                        </li>
+                    }
+                    <li class="@(ViewBag.currentPage + 1 > ViewBag.totalPages +1 ? "page-item disabled" : "page-item")">
+                        <a class="page-link" asp-action="Index" asp-route-page=@(ViewBag.currentPage + 1)>Следно</a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        }
+
+    </div>

@@ -2,53 +2,64 @@
 @model LoginModel
 
 @{
-    ViewData["Title"] = "Log in";
+    ViewData["Title"] = "Најави се";
 }
 
-<div class="container">
+<h1>@ViewData["Title"]</h1>
+<div class = "center-screen">
 
+        <div class="row">
 
-    <h1>@ViewData["Title"]</h1>
-    <div class="row">
-        <div class="col-md-4">
-            <section>
                 <form id="account" method="post">
-                    <h4>Use a local account to log in.</h4>
                     <hr />
-                    <div asp-validation-summary="All" class="text-danger"></div>
+                    @*<div asp-validation-summary="All" class="text-danger"></div>*@
                     <div class="form-group">
-                        <label asp-for="Input.Email"></label>
+                        <label>E-mail адреса</label>
                         <input asp-for="Input.Email" class="form-control" />
                         <span asp-validation-for="Input.Email" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Input.Password"></label>
+                        <label>Лозинка</label>
                         <input asp-for="Input.Password" class="form-control" />
                         <span asp-validation-for="Input.Password" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <div class="checkbox">
-                            <label asp-for="Input.RememberMe">
+                            <label>
                                 <input asp-for="Input.RememberMe" />
-                                @Html.DisplayNameFor(m => m.Input.RememberMe)
+                                Запомни ме
                             </label>
                         </div>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Log in</button>
+                        <button type="submit" class="btn btn-primary">Најави се</button>
                     </div>
                     <div class="form-group">
                         <p>
-                            <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
+                            <a id="forgot-password" asp-page="./ForgotPassword">Заборавена лозинка?</a>
                         </p>
                         <p>
-                            <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+                            <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Регистрирај се како нов корисник</a>
                         </p>
                     </div>
                 </form>
-            </section>
         </div>
-        <div class="col-md-6 col-md-offset-2">
+        </div>
+        <style>
+            .center-screen {
+                 position: absolute;
+                 top: 50%;
+                 left: 50%;
+                 margin-right: -50%;
+                 transform: translate(-50%, -50%);
+               }
+               h1 {
+                   text-align: center;
+                   color: #0c263d;
+                   margin: 30px;
+               }
+        </style>
+       @* <div class="col-md-6 col-md-offset-2">
             <section>
                 <h4>Use another service to log in.</h4>
                 <hr />
@@ -76,7 +87,7 @@
                         </form>
                     }
                 }
-            </section>
+            </section>*@
         </div>
     </div>
 </div>

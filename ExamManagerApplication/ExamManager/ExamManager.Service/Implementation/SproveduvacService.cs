@@ -10,7 +10,7 @@ namespace ExamManager.Service.Implementation
 {
     public class SproveduvacService : ISproveduvacService
     {
-        
+
         private readonly ISproveduvacRepository _sproveduvacRepository;
         public SproveduvacService(ISproveduvacRepository sproveduvacRepository)
         {
@@ -29,10 +29,10 @@ namespace ExamManager.Service.Implementation
             this._sproveduvacRepository.Delete(sp);
         }
 
-        public List<string> GetAllSproceducaiId()
-        {
-            return this._sproveduvacRepository.GetAll().Select(z => z.SproveduvacId).ToList();
-        }
+        /* public List<string> GetAllSproceducaiId()
+         {
+             return this._sproveduvacRepository.GetAll().Select(z => z.SproveduvacId).ToList();
+         }*/
 
         public List<Sproveduvac> GetAllSproveduvaci()
         {
@@ -48,5 +48,25 @@ namespace ExamManager.Service.Implementation
         {
             this._sproveduvacRepository.Update(sp);
         }
+        public List<Sproveduvac> GetSproveduvaciPaginated(int page)
+        {
+            return this._sproveduvacRepository.GetSproveduvaciPaginated(page).ToList();
+        }
+
+        public List<Sproveduvac> GetDetailsForSproveduvacWithId(List<String> ids)
+        {
+            return this._sproveduvacRepository.GetDetailsForSproveduvacWithId(ids).ToList();
+        }
+
+        public Sproveduvac GetDetailsForSproveduvac(int? id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteSproveduvac(int? id)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

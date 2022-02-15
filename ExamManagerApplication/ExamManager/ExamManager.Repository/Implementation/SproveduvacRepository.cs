@@ -59,5 +59,16 @@ namespace ExamManager.Repository.Implementation
             entities.Remove(entity);
             context.SaveChanges();
         }
+
+        public IEnumerable<Sproveduvac> GetSproveduvaciPaginated(int page)
+        {
+            int maxRows = 10;
+            return entities.OrderBy(z => z.SproveduvacId).Skip((page - 1) * maxRows).Take(maxRows).AsEnumerable();
+        }
+
+        public IEnumerable<Sproveduvac> GetDetailsForSproveduvacWithId(List<String> ids)
+        {
+            return entities.Where(z => ids.Contains(z.SproveduvacId)).AsEnumerable();
+        }
     }
 }

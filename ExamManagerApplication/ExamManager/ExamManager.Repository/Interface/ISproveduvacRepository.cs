@@ -8,6 +8,8 @@ namespace ExamManager.Repository.Interface
     public interface ISproveduvacRepository
     {
         IEnumerable<Sproveduvac> GetAll();
+        IEnumerable<Sproveduvac> GetSproveduvaciPaginated(int page);
+        IEnumerable<Sproveduvac> GetDetailsForSproveduvacWithId(List<String> ids);
         Sproveduvac Get(string id);
         void Insert(Sproveduvac entity);
         void Update(Sproveduvac entity);
