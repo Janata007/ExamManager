@@ -4,14 +4,16 @@ using ExamManager.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ExamManager.Repository.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220215122640_Newest1")]
+    partial class Newest1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -49,7 +51,7 @@ namespace ExamManager.Repository.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("2542f449-81ea-4765-8c12-10b02eb73b62"),
+                            Id = new Guid("687ddcc1-2cf6-4e0d-8990-8aac9d03d876"),
                             BrojNaTermin = 6,
                             KodNaPredmet = "F18L2W046",
                             PolaganjeDo = new DateTime(2021, 8, 23, 20, 0, 0, 0, DateTimeKind.Unspecified),
@@ -58,7 +60,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c9da9df5-c950-4123-a1fb-73b5930ce2fa"),
+                            Id = new Guid("5f64e1d2-83ec-4688-8668-bb65feb7627a"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L1W031",
                             PolaganjeDo = new DateTime(2021, 8, 23, 11, 0, 0, 0, DateTimeKind.Unspecified),
@@ -67,7 +69,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("815d9335-d80e-4294-916d-1b6aff5fcbc0"),
+                            Id = new Guid("81413e28-4b43-4700-9cf3-ee707fc5b3d0"),
                             BrojNaTermin = 5,
                             KodNaPredmet = "F18L3W103",
                             PolaganjeDo = new DateTime(2021, 8, 23, 20, 0, 0, 0, DateTimeKind.Unspecified),
@@ -76,7 +78,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("922a5da1-3835-488f-8c63-0f4128f9a91a"),
+                            Id = new Guid("94973d8f-809e-4f64-a328-c02270e0b9d2"),
                             BrojNaTermin = 3,
                             KodNaPredmet = "F18L3W024",
                             PolaganjeDo = new DateTime(2021, 8, 23, 11, 0, 0, 0, DateTimeKind.Unspecified),
@@ -85,7 +87,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4e9ce1e9-588b-41c8-865d-15aa94853e95"),
+                            Id = new Guid("9ba64f0e-3a65-4f4d-b1cc-945860d308d2"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L1W007",
                             PolaganjeDo = new DateTime(2021, 8, 24, 16, 0, 0, 0, DateTimeKind.Unspecified),
@@ -94,7 +96,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d57c3b9a-2cf9-40a3-a5ea-1c3ae882d977"),
+                            Id = new Guid("436d5728-90c5-40c0-b4d0-aa69a181b375"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L2W006",
                             PolaganjeDo = new DateTime(2021, 8, 24, 14, 0, 0, 0, DateTimeKind.Unspecified),
@@ -103,7 +105,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a927d91d-0714-4599-abff-e2d59b9cc46a"),
+                            Id = new Guid("853010d7-f156-40f5-96a0-07b83cae9af9"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L3W134",
                             PolaganjeDo = new DateTime(2021, 8, 24, 20, 0, 0, 0, DateTimeKind.Unspecified),
@@ -112,7 +114,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4c827305-6bc2-4ff9-80f9-33a568e2299f"),
+                            Id = new Guid("acdc5b0a-df7e-44d5-a46f-a396a5d24a2f"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L3W060",
                             PolaganjeDo = new DateTime(2021, 8, 24, 14, 0, 0, 0, DateTimeKind.Unspecified),
@@ -121,7 +123,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c1f2cceb-d45e-4a6f-97d4-c50318cd70cc"),
+                            Id = new Guid("b1667837-e2c4-4736-a888-6b58ddeaabf1"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L3W064",
                             PolaganjeDo = new DateTime(2021, 8, 24, 14, 0, 0, 0, DateTimeKind.Unspecified),
@@ -130,7 +132,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e72d86fe-f93c-4f4f-9d87-39b1703ba8bd"),
+                            Id = new Guid("b9a3bf20-9420-4188-99e0-852e219fef2c"),
                             BrojNaTermin = 3,
                             KodNaPredmet = "F18L3W008",
                             PolaganjeDo = new DateTime(2021, 8, 24, 17, 0, 0, 0, DateTimeKind.Unspecified),
@@ -139,7 +141,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c04e666e-10ce-46c6-81fc-7854e96d2508"),
+                            Id = new Guid("4fb4de5c-a5ee-4f98-bf06-38ba81316840"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L3W075",
                             PolaganjeDo = new DateTime(2021, 8, 24, 16, 0, 0, 0, DateTimeKind.Unspecified),
@@ -148,7 +150,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("96358bbd-36ee-4cb5-8ed4-a64369cd48d3"),
+                            Id = new Guid("48b51c80-8182-4502-8193-0eab38b89fdd"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L1S013",
                             PolaganjeDo = new DateTime(2021, 8, 25, 14, 0, 0, 0, DateTimeKind.Unspecified),
@@ -157,7 +159,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("343cdef9-70a4-4ef6-aec7-57527f11aaab"),
+                            Id = new Guid("a8c39c22-29a9-442d-9eb9-a1e2211c3631"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L1W033",
                             PolaganjeDo = new DateTime(2021, 8, 25, 20, 0, 0, 0, DateTimeKind.Unspecified),
@@ -166,7 +168,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e2b12fe4-63f5-4453-a049-f6b3a14c0e9b"),
+                            Id = new Guid("6975f3c3-6fb2-44e8-93e2-5e6fb6a53b8b"),
                             BrojNaTermin = 3,
                             KodNaPredmet = "F18L3W004",
                             PolaganjeDo = new DateTime(2021, 8, 25, 20, 0, 0, 0, DateTimeKind.Unspecified),
@@ -175,7 +177,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2cdd0384-8f6b-411d-abd2-745c462e534e"),
+                            Id = new Guid("fdeddc33-b56e-4b29-a3c7-1b6d2822bb31"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L1W020",
                             PolaganjeDo = new DateTime(2021, 8, 26, 17, 0, 0, 0, DateTimeKind.Unspecified),
@@ -184,7 +186,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f82e3c2e-e90e-45c3-90bf-81ed63dc3e65"),
+                            Id = new Guid("750b6b3b-94da-40c7-902e-cd4df0bada2f"),
                             BrojNaTermin = 3,
                             KodNaPredmet = "F18L3W044",
                             PolaganjeDo = new DateTime(2021, 8, 26, 14, 0, 0, 0, DateTimeKind.Unspecified),
@@ -193,7 +195,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3c79b38d-5cbc-4527-9f9a-c868da6884c4"),
+                            Id = new Guid("fb724695-4988-4991-87d5-f16d4e39c36f"),
                             BrojNaTermin = 6,
                             KodNaPredmet = "F18L3W126",
                             PolaganjeDo = new DateTime(2021, 8, 26, 17, 0, 0, 0, DateTimeKind.Unspecified),
@@ -202,7 +204,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("355408c0-35b6-4d03-9770-6b51034b13c1"),
+                            Id = new Guid("043ecb6a-a416-45a0-a19d-01c522176349"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L1W041",
                             PolaganjeDo = new DateTime(2021, 8, 27, 11, 0, 0, 0, DateTimeKind.Unspecified),
@@ -211,7 +213,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6a4b584d-5df2-4dc0-8316-c6c435b1b6fc"),
+                            Id = new Guid("c9dd9dcb-76f1-4a29-9a2b-8dde6ede778a"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L3W027",
                             PolaganjeDo = new DateTime(2021, 8, 27, 13, 0, 0, 0, DateTimeKind.Unspecified),
@@ -220,7 +222,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a025434a-f521-4f7b-b57b-f119dec1e3c7"),
+                            Id = new Guid("53cdd72e-79d5-4ee4-b3a9-f03732805abd"),
                             BrojNaTermin = 6,
                             KodNaPredmet = "F18L2W001",
                             PolaganjeDo = new DateTime(2021, 8, 27, 20, 0, 0, 0, DateTimeKind.Unspecified),
@@ -229,7 +231,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("072f9e6e-b730-4aa2-a3ae-db97e1638af5"),
+                            Id = new Guid("fbe055f1-ba9c-4aed-9be0-25430ec3f8c2"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L3W105",
                             PolaganjeDo = new DateTime(2021, 8, 27, 15, 0, 0, 0, DateTimeKind.Unspecified),
@@ -238,7 +240,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8fa79b68-be09-419f-b123-9a340108158e"),
+                            Id = new Guid("8fef7aa0-1a56-4f89-8eb6-29ee979d7f85"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L2W104",
                             PolaganjeDo = new DateTime(2021, 8, 30, 13, 0, 0, 0, DateTimeKind.Unspecified),
@@ -247,7 +249,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c7717098-5814-4c46-9d44-91a93f2455d8"),
+                            Id = new Guid("ab79d1ec-b803-4eaa-b049-70ba6d8aea4b"),
                             BrojNaTermin = 3,
                             KodNaPredmet = "F18L3W136",
                             PolaganjeDo = new DateTime(2021, 8, 30, 17, 0, 0, 0, DateTimeKind.Unspecified),
@@ -256,7 +258,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("753bbb5d-6806-46d3-a070-de41c6d4eef6"),
+                            Id = new Guid("640b7e90-269c-4e1c-96b0-f5f83cef4699"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L3W050",
                             PolaganjeDo = new DateTime(2021, 8, 30, 20, 0, 0, 0, DateTimeKind.Unspecified),
@@ -265,7 +267,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2f7bc75b-8113-499d-9586-f11785f9df3b"),
+                            Id = new Guid("ccfd78f1-0b81-4dac-bd09-6835ba305ceb"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L2W167",
                             PolaganjeDo = new DateTime(2021, 8, 30, 12, 0, 0, 0, DateTimeKind.Unspecified),
@@ -274,7 +276,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("50d3c7e7-0e26-4d5d-ba58-be2392945de6"),
+                            Id = new Guid("8cecea38-7871-43da-ba57-bbcacdadd298"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L3W079",
                             PolaganjeDo = new DateTime(2021, 8, 30, 16, 0, 0, 0, DateTimeKind.Unspecified),
@@ -283,7 +285,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4bf0a201-7a72-4f5f-835a-44c3da2505bd"),
+                            Id = new Guid("fa0965aa-876f-4bd8-965f-a3ea03a6e3b5"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L3W037",
                             PolaganjeDo = new DateTime(2021, 8, 30, 20, 0, 0, 0, DateTimeKind.Unspecified),
@@ -292,7 +294,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("fed9d462-3182-4c00-8b0f-2dc9de0964e0"),
+                            Id = new Guid("5dad36b6-dcfd-451d-b66b-04e3dac433c4"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L2W140",
                             PolaganjeDo = new DateTime(2021, 8, 31, 20, 0, 0, 0, DateTimeKind.Unspecified),
@@ -301,7 +303,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("514248af-9c04-4b9e-8930-3f33c8ef1406"),
+                            Id = new Guid("daf1a895-282d-41f8-9384-6b76d5c494f2"),
                             BrojNaTermin = 6,
                             KodNaPredmet = "F18L3W009",
                             PolaganjeDo = new DateTime(2021, 8, 31, 17, 0, 0, 0, DateTimeKind.Unspecified),
@@ -310,7 +312,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0a00e50a-12ce-432e-96aa-0bcb57562fd9"),
+                            Id = new Guid("3b8ce54c-9f27-4330-b877-897e90256999"),
                             BrojNaTermin = 6,
                             KodNaPredmet = "F18L3W060",
                             PolaganjeDo = new DateTime(2021, 8, 31, 11, 0, 0, 0, DateTimeKind.Unspecified),
@@ -319,7 +321,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("87ecd42b-626f-4224-8ff4-4446f090e19a"),
+                            Id = new Guid("48702266-0e53-428d-a6a9-338a529f7a0c"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L3S040",
                             PolaganjeDo = new DateTime(2021, 8, 31, 20, 0, 0, 0, DateTimeKind.Unspecified),
@@ -328,7 +330,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("fa1e23c3-6c5f-4b3c-a408-258e4178411c"),
+                            Id = new Guid("a2329263-d927-463b-8acc-32fd3fa88d2d"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L2S100",
                             PolaganjeDo = new DateTime(2021, 8, 31, 14, 0, 0, 0, DateTimeKind.Unspecified),
@@ -337,7 +339,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b791788d-6717-48ca-a347-f336860adbd6"),
+                            Id = new Guid("7826fa12-5f61-4755-a493-773f848156d8"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L3W129",
                             PolaganjeDo = new DateTime(2021, 8, 31, 18, 0, 0, 0, DateTimeKind.Unspecified),
@@ -346,7 +348,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4597d13c-aa48-4bce-9c3c-9d0748905228"),
+                            Id = new Guid("eb72b7ef-6b00-4dc9-bea1-705e961af61a"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L1W005",
                             PolaganjeDo = new DateTime(2021, 8, 31, 20, 0, 0, 0, DateTimeKind.Unspecified),
@@ -355,7 +357,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1f08ca94-c9a2-4312-afaa-a3f798f73310"),
+                            Id = new Guid("af63c50c-8ebe-4bea-ac8e-05c83139aea0"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L1W011",
                             PolaganjeDo = new DateTime(2021, 9, 1, 17, 0, 0, 0, DateTimeKind.Unspecified),
@@ -364,7 +366,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1e68e000-e813-4c06-a2a0-5225fdd0f424"),
+                            Id = new Guid("794430d7-768e-4f98-bb8f-b90150ab5d69"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L2W067",
                             PolaganjeDo = new DateTime(2021, 9, 1, 20, 0, 0, 0, DateTimeKind.Unspecified),
@@ -373,7 +375,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("05359aeb-8cf3-48e4-aeae-250d2715acd9"),
+                            Id = new Guid("367bc64d-ac94-4053-967d-218ab8c310b5"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L2W109",
                             PolaganjeDo = new DateTime(2021, 9, 1, 15, 0, 0, 0, DateTimeKind.Unspecified),
@@ -382,7 +384,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("11086e61-9c69-4a04-906e-285800b0dd78"),
+                            Id = new Guid("8ac65f27-688c-45a7-84ab-093a6ef53be0"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L3W137",
                             PolaganjeDo = new DateTime(2021, 9, 1, 18, 0, 0, 0, DateTimeKind.Unspecified),
@@ -391,7 +393,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("24a7657e-f55f-4dd2-b849-34185353a03d"),
+                            Id = new Guid("f80ca316-ccaf-4c69-ba9d-06ff2809cc91"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L3W035",
                             PolaganjeDo = new DateTime(2021, 9, 1, 19, 0, 0, 0, DateTimeKind.Unspecified),
@@ -400,7 +402,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6bf0bdf6-45dd-4179-bf77-a1fb5af8c57c"),
+                            Id = new Guid("56969520-6ca6-4b4e-a8dd-752f8b71937a"),
                             BrojNaTermin = 3,
                             KodNaPredmet = "F18L1W049",
                             PolaganjeDo = new DateTime(2021, 9, 1, 20, 0, 0, 0, DateTimeKind.Unspecified),
@@ -409,7 +411,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1c55b638-2e84-4fcc-bf68-9aeae6a4f33f"),
+                            Id = new Guid("5441cff9-c263-40ea-93bf-d7754142cb7e"),
                             BrojNaTermin = 3,
                             KodNaPredmet = "F18L3S036",
                             PolaganjeDo = new DateTime(2021, 9, 1, 15, 0, 0, 0, DateTimeKind.Unspecified),
@@ -418,7 +420,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("39ac376b-582e-4a30-88ce-c2ae1e470e1d"),
+                            Id = new Guid("2fbb4ec9-025b-4064-a116-e13eeb866e9c"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L1S052",
                             PolaganjeDo = new DateTime(2021, 9, 2, 10, 0, 0, 0, DateTimeKind.Unspecified),
@@ -427,7 +429,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("44f245ad-675f-4a0c-aed0-f24740cf8a3f"),
+                            Id = new Guid("0c6f729b-606a-4ec5-87c9-450a356d88fe"),
                             BrojNaTermin = 3,
                             KodNaPredmet = "F18L2S002",
                             PolaganjeDo = new DateTime(2021, 9, 2, 9, 0, 0, 0, DateTimeKind.Unspecified),
@@ -436,7 +438,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("558a9cef-5f67-41cd-bb5b-659642906ad2"),
+                            Id = new Guid("f01eb4f4-0582-499c-a5a0-fc374ac5d739"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L2S099",
                             PolaganjeDo = new DateTime(2021, 9, 2, 11, 0, 0, 0, DateTimeKind.Unspecified),
@@ -445,7 +447,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("70e8bed0-7f15-4f4c-a177-b3a801bcc6c0"),
+                            Id = new Guid("87a55b42-356d-49ac-b362-a9127f3cfead"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L3S166",
                             PolaganjeDo = new DateTime(2021, 9, 2, 11, 0, 0, 0, DateTimeKind.Unspecified),
@@ -454,7 +456,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cad30416-33a2-4c68-89d6-b7817ec30d0a"),
+                            Id = new Guid("8ecf27da-42a9-4d55-920a-c120b56a5935"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L3S063",
                             PolaganjeDo = new DateTime(2021, 9, 2, 14, 0, 0, 0, DateTimeKind.Unspecified),
@@ -463,7 +465,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e197529a-81e1-4408-a882-0def88a70e62"),
+                            Id = new Guid("cab6a95a-91af-4170-a722-c4780c2e8326"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L3S155",
                             PolaganjeDo = new DateTime(2021, 9, 2, 12, 0, 0, 0, DateTimeKind.Unspecified),
@@ -472,7 +474,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f45d6e9e-ccb5-4a9d-a133-2141f0e81c32"),
+                            Id = new Guid("51454b7e-b4f0-4e0c-aa43-38af59e4b4d0"),
                             BrojNaTermin = 6,
                             KodNaPredmet = "F18L1S045",
                             PolaganjeDo = new DateTime(2021, 9, 3, 14, 0, 0, 0, DateTimeKind.Unspecified),
@@ -481,7 +483,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a6e0f2a1-3b17-43f8-a12b-4ecaac4e6a1a"),
+                            Id = new Guid("497ec553-0c11-4cd5-b142-412403bbb613"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L1S032",
                             PolaganjeDo = new DateTime(2021, 9, 3, 11, 0, 0, 0, DateTimeKind.Unspecified),
@@ -490,7 +492,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6adbb7d4-9ed7-46a7-97fd-bf31bf43b4cd"),
+                            Id = new Guid("ed192eb9-0e2e-43e6-be79-642070172d29"),
                             BrojNaTermin = 3,
                             KodNaPredmet = "F18L3S086",
                             PolaganjeDo = new DateTime(2021, 9, 3, 20, 0, 0, 0, DateTimeKind.Unspecified),
@@ -499,7 +501,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a53c5f82-6504-4145-a915-ed225a898168"),
+                            Id = new Guid("ed152a83-cbb1-4189-83b3-f4ee444ebaa8"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L3S019",
                             PolaganjeDo = new DateTime(2021, 9, 3, 18, 0, 0, 0, DateTimeKind.Unspecified),
@@ -508,7 +510,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cc4fe388-e163-4e6c-9f87-fce7e16528ac"),
+                            Id = new Guid("049c2cd5-833f-4813-89fc-8f6664daeb31"),
                             BrojNaTermin = 3,
                             KodNaPredmet = "F18L3S107",
                             PolaganjeDo = new DateTime(2021, 9, 3, 11, 0, 0, 0, DateTimeKind.Unspecified),
@@ -517,7 +519,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2dd55328-b2b7-4c8d-99d2-b834a2f7d279"),
+                            Id = new Guid("8651b430-8802-40c6-a0a9-733f32d8f5d9"),
                             BrojNaTermin = 3,
                             KodNaPredmet = "F18L2S030",
                             PolaganjeDo = new DateTime(2021, 9, 3, 20, 0, 0, 0, DateTimeKind.Unspecified),
@@ -526,7 +528,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("36f2b6e1-a5b0-416c-bd81-a657b63d1135"),
+                            Id = new Guid("49a08544-8106-4f6e-ae46-674cf334c7a3"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L3S138",
                             PolaganjeDo = new DateTime(2021, 9, 3, 11, 0, 0, 0, DateTimeKind.Unspecified),
@@ -535,7 +537,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e9514731-8896-40fc-a5f3-e6f52c90d511"),
+                            Id = new Guid("645888fa-6c40-4349-89c2-d94f12faa8a6"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L3S130",
                             PolaganjeDo = new DateTime(2021, 9, 3, 13, 0, 0, 0, DateTimeKind.Unspecified),
@@ -544,7 +546,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("01e8e8dd-a7ce-4ebe-8e90-58456089fe0a"),
+                            Id = new Guid("0f3ce6be-1f42-44c6-9ebc-7d1bc8c28c53"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L2S017",
                             PolaganjeDo = new DateTime(2021, 9, 6, 17, 0, 0, 0, DateTimeKind.Unspecified),
@@ -553,7 +555,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("734dff11-cc04-4967-8683-a006cffa3657"),
+                            Id = new Guid("21fabd62-691a-41c0-9ef0-b81b65280e79"),
                             BrojNaTermin = 3,
                             KodNaPredmet = "F18L3S094",
                             PolaganjeDo = new DateTime(2021, 9, 6, 14, 0, 0, 0, DateTimeKind.Unspecified),
@@ -562,7 +564,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3400672d-c868-4a54-bb40-97c7be29076f"),
+                            Id = new Guid("5ffe5a73-ea3e-4af5-a397-d7a7ee98aa28"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L3S059",
                             PolaganjeDo = new DateTime(2021, 9, 6, 17, 0, 0, 0, DateTimeKind.Unspecified),
@@ -571,7 +573,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("fcc73f08-2174-4c93-bdcb-ab9904ffd0d7"),
+                            Id = new Guid("0809c12c-ee94-46fc-9e34-15e9322eb8b0"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L1S023",
                             PolaganjeDo = new DateTime(2021, 9, 7, 18, 0, 0, 0, DateTimeKind.Unspecified),
@@ -580,7 +582,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c0da40f0-041f-4256-a8e2-2b1d0de45e9c"),
+                            Id = new Guid("90866e26-e256-4b30-8f68-10a8fd90d784"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L3S141",
                             PolaganjeDo = new DateTime(2021, 9, 7, 11, 0, 0, 0, DateTimeKind.Unspecified),
@@ -589,7 +591,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5db1043f-1539-42b5-85ba-cf1bb76f4d6a"),
+                            Id = new Guid("11d98654-94e6-46e7-b1d7-f6b3c7a077c2"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L3S091",
                             PolaganjeDo = new DateTime(2021, 9, 7, 15, 0, 0, 0, DateTimeKind.Unspecified),
@@ -598,7 +600,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8d9f2136-7b8e-4289-b5fc-608af4b491a9"),
+                            Id = new Guid("7ca05b4c-3c7a-4020-9059-3db86ffe544e"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L2S110",
                             PolaganjeDo = new DateTime(2021, 9, 7, 19, 0, 0, 0, DateTimeKind.Unspecified),
@@ -607,7 +609,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("976d5f7a-ecf7-43c5-b712-a8722e9990a3"),
+                            Id = new Guid("08ba456d-06fe-4323-aa08-44285431798b"),
                             BrojNaTermin = 3,
                             KodNaPredmet = "F18L1S034",
                             PolaganjeDo = new DateTime(2021, 9, 9, 14, 0, 0, 0, DateTimeKind.Unspecified),
@@ -616,7 +618,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0d95226b-8bfe-4b0a-8f2e-4dfa3caaccbe"),
+                            Id = new Guid("6dc1426b-c6d5-4c42-8765-8d38389fc1c0"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L1S015",
                             PolaganjeDo = new DateTime(2021, 9, 9, 17, 0, 0, 0, DateTimeKind.Unspecified),
@@ -625,7 +627,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6e286f50-b754-4c22-b80b-e71758142a90"),
+                            Id = new Guid("3b32afad-af69-48a7-838b-e2a58a6633d0"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L2S082",
                             PolaganjeDo = new DateTime(2021, 9, 9, 11, 0, 0, 0, DateTimeKind.Unspecified),
@@ -634,7 +636,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("289ee7aa-ec85-4eb6-a8c8-3e50736d6e0d"),
+                            Id = new Guid("3f671d8b-897f-4090-b296-2b0af068b705"),
                             BrojNaTermin = 5,
                             KodNaPredmet = "F18L2S029",
                             PolaganjeDo = new DateTime(2021, 9, 9, 16, 0, 0, 0, DateTimeKind.Unspecified),
@@ -643,7 +645,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6b27b1d2-7c93-47d9-af78-b76c695e76c3"),
+                            Id = new Guid("29184f4c-d5ce-460b-b89c-6a03444d8ae2"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L3S077",
                             PolaganjeDo = new DateTime(2021, 9, 9, 13, 0, 0, 0, DateTimeKind.Unspecified),
@@ -652,7 +654,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("baca990f-ef9b-4376-b5f8-cd310606fc9c"),
+                            Id = new Guid("0660c7da-54f0-45fc-85de-e8eebac6910f"),
                             BrojNaTermin = 3,
                             KodNaPredmet = "F18L1S016",
                             PolaganjeDo = new DateTime(2021, 9, 10, 14, 0, 0, 0, DateTimeKind.Unspecified),
@@ -661,7 +663,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7cc10172-d5a6-4f1e-adb5-00b73257bd51"),
+                            Id = new Guid("8df114c9-7796-4ddb-9e08-37873b9f26eb"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L3S010",
                             PolaganjeDo = new DateTime(2021, 9, 10, 16, 0, 0, 0, DateTimeKind.Unspecified),
@@ -670,7 +672,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3561b1a2-5890-4efa-b920-ce754316f163"),
+                            Id = new Guid("7d987c71-7b85-405d-8b58-4f36050bff08"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L2S124",
                             PolaganjeDo = new DateTime(2021, 9, 10, 19, 0, 0, 0, DateTimeKind.Unspecified),
@@ -679,7 +681,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5f4ca491-e5eb-4837-a8c2-95f8275af398"),
+                            Id = new Guid("92e5cd0f-eb70-4d8d-8275-998b85e74107"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L3S022",
                             PolaganjeDo = new DateTime(2021, 9, 10, 10, 0, 0, 0, DateTimeKind.Unspecified),
@@ -688,7 +690,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5b1807f2-3aa3-41dd-bc3c-147cbcbda6aa"),
+                            Id = new Guid("9b9e1626-89ee-4df5-9443-8aa5a8f4ad7f"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L1W070",
                             PolaganjeDo = new DateTime(2021, 9, 10, 13, 0, 0, 0, DateTimeKind.Unspecified),
@@ -697,7 +699,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5c746783-7813-4254-8c4a-267b099fca66"),
+                            Id = new Guid("6891cfa2-b57f-4e7c-a123-4a2c1bb4efc3"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L3W085",
                             PolaganjeDo = new DateTime(2021, 9, 10, 11, 0, 0, 0, DateTimeKind.Unspecified),
@@ -706,7 +708,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("629ab478-41ae-49cd-a4e5-e6412371f713"),
+                            Id = new Guid("736edc03-88c2-4d37-95f7-2553ccbffd28"),
                             BrojNaTermin = 3,
                             KodNaPredmet = "F18L1S003",
                             PolaganjeDo = new DateTime(2021, 9, 13, 14, 0, 0, 0, DateTimeKind.Unspecified),
@@ -715,7 +717,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f200c1c5-151a-4630-bb81-6292129a17d0"),
+                            Id = new Guid("703bc25a-e165-4e2a-9079-c374505be18e"),
                             BrojNaTermin = 6,
                             KodNaPredmet = "F18L2S084",
                             PolaganjeDo = new DateTime(2021, 9, 13, 14, 0, 0, 0, DateTimeKind.Unspecified),
@@ -724,7 +726,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a4bdbb46-549e-437d-848e-1ad26e4c2d26"),
+                            Id = new Guid("79b509c4-556e-438e-9125-22397aa4c068"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L3S157",
                             PolaganjeDo = new DateTime(2021, 9, 13, 14, 0, 0, 0, DateTimeKind.Unspecified),
@@ -733,7 +735,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("153943a3-6857-4aaa-abc3-418d5aa8e8c6"),
+                            Id = new Guid("01bd4fee-39f5-4d5c-b9b8-e7689e3c605f"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L3S135",
                             PolaganjeDo = new DateTime(2021, 9, 13, 16, 0, 0, 0, DateTimeKind.Unspecified),
@@ -742,7 +744,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("733afd91-d618-4098-be30-fade4da75015"),
+                            Id = new Guid("3142fa8c-d85f-4ffd-8005-138c3959079a"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L3S118",
                             PolaganjeDo = new DateTime(2021, 9, 13, 9, 0, 0, 0, DateTimeKind.Unspecified),
@@ -751,7 +753,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("bb6f84ff-ab4a-4bd4-b108-ddf011b832d7"),
+                            Id = new Guid("d420d5ae-4cbe-4f7f-bc1c-b45076f55f04"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L1S146",
                             PolaganjeDo = new DateTime(2021, 9, 14, 17, 0, 0, 0, DateTimeKind.Unspecified),
@@ -760,7 +762,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("18ab4368-1d3c-4741-afcf-7ecab5b50a47"),
+                            Id = new Guid("809efd23-ec78-45ee-8cc5-4a16519610eb"),
                             BrojNaTermin = 3,
                             KodNaPredmet = "F18L1S116",
                             PolaganjeDo = new DateTime(2021, 9, 14, 20, 0, 0, 0, DateTimeKind.Unspecified),
@@ -769,7 +771,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("604be774-6bf3-499e-8bd8-402152629c9e"),
+                            Id = new Guid("e43b0579-470f-4c0e-8891-6dbc11763c89"),
                             BrojNaTermin = 3,
                             KodNaPredmet = "F18L3S025",
                             PolaganjeDo = new DateTime(2021, 9, 14, 20, 0, 0, 0, DateTimeKind.Unspecified),
@@ -778,7 +780,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("55c4cb44-01e9-4fb4-bad0-d68cc940b20c"),
+                            Id = new Guid("aa9bd30e-7698-44c0-9a29-8da52231e227"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L3S028",
                             PolaganjeDo = new DateTime(2021, 9, 14, 16, 0, 0, 0, DateTimeKind.Unspecified),
@@ -787,7 +789,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("58f10a61-aa7e-44e4-b265-62554f680202"),
+                            Id = new Guid("ce17996d-1651-482e-b73a-8865ec8e361a"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L2S097",
                             PolaganjeDo = new DateTime(2021, 9, 14, 12, 0, 0, 0, DateTimeKind.Unspecified),
@@ -796,7 +798,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f48fd3ac-bc0b-4aec-9db0-d61cd222d4c8"),
+                            Id = new Guid("6484d923-bc9c-4dbf-b18c-0549dd373645"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L1S026",
                             PolaganjeDo = new DateTime(2021, 9, 15, 11, 0, 0, 0, DateTimeKind.Unspecified),
@@ -805,7 +807,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2711fe22-1e1f-4e50-9437-ce3469d85351"),
+                            Id = new Guid("c1fc6151-a3db-448d-aca2-b47c59e3c42c"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L1S120",
                             PolaganjeDo = new DateTime(2021, 9, 15, 13, 0, 0, 0, DateTimeKind.Unspecified),
@@ -814,7 +816,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("90bdba60-fc89-414d-aaf7-762755e448ba"),
+                            Id = new Guid("c9c5d8b2-63bc-4d3b-933a-fa3fe97825b8"),
                             BrojNaTermin = 4,
                             KodNaPredmet = "F18L2S119",
                             PolaganjeDo = new DateTime(2021, 9, 15, 20, 0, 0, 0, DateTimeKind.Unspecified),
@@ -823,7 +825,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c37de6f9-7623-4ca9-9c99-fcfe86723d5d"),
+                            Id = new Guid("ae0d4cff-6d86-4d23-8892-45e715ed22b9"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L3W043",
                             PolaganjeDo = new DateTime(2021, 9, 15, 17, 0, 0, 0, DateTimeKind.Unspecified),
@@ -832,7 +834,7 @@ namespace ExamManager.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ffa8ca0d-adfe-4797-8f94-a446f494f124"),
+                            Id = new Guid("d15cdef9-fb59-4c51-a3b0-d9292fc17f46"),
                             BrojNaTermin = 2,
                             KodNaPredmet = "F18L3S122",
                             PolaganjeDo = new DateTime(2021, 9, 15, 19, 0, 0, 0, DateTimeKind.Unspecified),
@@ -5917,63 +5919,63 @@ namespace ExamManager.Repository.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("0d87a8ab-ef6f-42a8-b2a8-bd97af2975ea"),
+                            Id = new Guid("2311e605-0216-4733-8565-0a3289f7f709"),
                             Ime = "Lab1",
-                            Kapacitet = 36
-                        },
-                        new
-                        {
-                            Id = new Guid("f6e37bed-5de4-4560-9fce-87867826f412"),
-                            Ime = "Lab2",
-                            Kapacitet = 54
-                        },
-                        new
-                        {
-                            Id = new Guid("016e94e9-3487-4159-9379-4e549efed7a6"),
-                            Ime = "Lab3",
-                            Kapacitet = 69
-                        },
-                        new
-                        {
-                            Id = new Guid("a4144319-02a8-422e-b4eb-b395723af777"),
-                            Ime = "Lab4",
-                            Kapacitet = 55
-                        },
-                        new
-                        {
-                            Id = new Guid("ee1c764e-68fc-437a-8079-313ccbfcc6c9"),
-                            Ime = "Lab5",
-                            Kapacitet = 46
-                        },
-                        new
-                        {
-                            Id = new Guid("cdb8897b-66b2-4e67-94d0-6749f6e8e921"),
-                            Ime = "Lab6",
                             Kapacitet = 39
                         },
                         new
                         {
-                            Id = new Guid("f9a346a9-f0ab-42bb-a648-e744816f1212"),
-                            Ime = "Lab7",
+                            Id = new Guid("ae66026b-cc17-43fd-b4db-4784fc16ed61"),
+                            Ime = "Lab2",
+                            Kapacitet = 46
+                        },
+                        new
+                        {
+                            Id = new Guid("aae28fd8-8a07-4199-89b4-4fa31af75db0"),
+                            Ime = "Lab3",
                             Kapacitet = 57
                         },
                         new
                         {
-                            Id = new Guid("dc3302f3-33c7-4238-9fa5-d431ad1d1385"),
+                            Id = new Guid("811a7cd8-c2cb-42b0-b86e-e992b6fe439b"),
+                            Ime = "Lab4",
+                            Kapacitet = 49
+                        },
+                        new
+                        {
+                            Id = new Guid("fd5014f0-6bc1-4c83-bf81-7c517bbc8532"),
+                            Ime = "Lab5",
+                            Kapacitet = 39
+                        },
+                        new
+                        {
+                            Id = new Guid("532722aa-5392-4fe7-b635-20afb5766cbe"),
+                            Ime = "Lab6",
+                            Kapacitet = 60
+                        },
+                        new
+                        {
+                            Id = new Guid("a4a12d8e-e34b-41af-9e3b-d8465bb25835"),
+                            Ime = "Lab7",
+                            Kapacitet = 63
+                        },
+                        new
+                        {
+                            Id = new Guid("6e0e0908-f891-4a60-93db-6b516f64c0b6"),
                             Ime = "Lab8",
-                            Kapacitet = 43
+                            Kapacitet = 31
                         },
                         new
                         {
-                            Id = new Guid("c3d038f7-c750-45e6-9ae5-6f4391ec6216"),
+                            Id = new Guid("3724af88-2e75-4f6b-a4c8-e4e500fabde2"),
                             Ime = "Lab9",
-                            Kapacitet = 26
+                            Kapacitet = 65
                         },
                         new
                         {
-                            Id = new Guid("04cb2930-f466-4d9d-a20c-ddbfd2151b6a"),
+                            Id = new Guid("98919d0d-6881-4887-9557-c054d220d72a"),
                             Ime = "Lab10",
-                            Kapacitet = 64
+                            Kapacitet = 42
                         });
                 });
 

@@ -9705,19 +9705,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Simona\\.nuget\\packages\\": {}
+    "C:\\Users\\JMarkovikj\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Web\\ExamManager.Web.csproj",
+      "projectUniqueName": "C:\\Users\\JMarkovikj\\Source\\Repos\\ExamManager1\\ExamManagerApplication\\ExamManager\\ExamManager.Web\\ExamManager.Web.csproj",
       "projectName": "ExamManager.Web",
-      "projectPath": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Web\\ExamManager.Web.csproj",
-      "packagesPath": "C:\\Users\\Simona\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Web\\obj\\",
+      "projectPath": "C:\\Users\\JMarkovikj\\Source\\Repos\\ExamManager1\\ExamManagerApplication\\ExamManager\\ExamManager.Web\\ExamManager.Web.csproj",
+      "packagesPath": "C:\\Users\\JMarkovikj\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\JMarkovikj\\Source\\Repos\\ExamManager1\\ExamManagerApplication\\ExamManager\\ExamManager.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Simona\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\JMarkovikj\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9731,14 +9731,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj": {
-              "projectPath": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj"
+            "C:\\Users\\JMarkovikj\\Source\\Repos\\ExamManager1\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj": {
+              "projectPath": "C:\\Users\\JMarkovikj\\Source\\Repos\\ExamManager1\\ExamManagerApplication\\ExamManager\\ExamManager.Domain\\ExamManager.Domain.csproj"
             },
-            "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Repository\\ExamManager.Repository.csproj": {
-              "projectPath": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Repository\\ExamManager.Repository.csproj"
+            "C:\\Users\\JMarkovikj\\Source\\Repos\\ExamManager1\\ExamManagerApplication\\ExamManager\\ExamManager.Repository\\ExamManager.Repository.csproj": {
+              "projectPath": "C:\\Users\\JMarkovikj\\Source\\Repos\\ExamManager1\\ExamManagerApplication\\ExamManager\\ExamManager.Repository\\ExamManager.Repository.csproj"
             },
-            "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Service\\ExamManager.Service.csproj": {
-              "projectPath": "C:\\Users\\Simona\\Documents\\GitHub\\ExamManager\\ExamManagerApplication\\ExamManager\\ExamManager.Service\\ExamManager.Service.csproj"
+            "C:\\Users\\JMarkovikj\\Source\\Repos\\ExamManager1\\ExamManagerApplication\\ExamManager\\ExamManager.Service\\ExamManager.Service.csproj": {
+              "projectPath": "C:\\Users\\JMarkovikj\\Source\\Repos\\ExamManager1\\ExamManagerApplication\\ExamManager\\ExamManager.Service\\ExamManager.Service.csproj"
             }
           }
         }
@@ -9830,7 +9830,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   },

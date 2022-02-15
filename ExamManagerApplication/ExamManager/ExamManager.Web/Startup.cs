@@ -45,6 +45,7 @@ namespace ExamManager.Web
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped(typeof(IRepository<Termin>), typeof(Repository<Termin>));
             services.AddScoped(typeof(IPredmetRepository), typeof(PredmetRepository));
             services.AddScoped(typeof(ISproveduvacRepository), typeof(SproveduvacRepository));
             services.AddScoped(typeof(IStudentRepository), typeof(StudentRepository));

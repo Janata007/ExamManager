@@ -88,7 +88,7 @@ namespace ExamManager.Web.Controllers
 
             foreach(var t in schedule.schedule)
             {
-                Debug.WriteLine(t.teacherId);
+                Debug.WriteLine("DEZUREN ID: " + t.teacherId);
                 Termin termin = new Termin
                 {
                     VremeNaZapocnuvanje = t.timeSlot,
