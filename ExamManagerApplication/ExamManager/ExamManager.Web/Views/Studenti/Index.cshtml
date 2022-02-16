@@ -100,6 +100,9 @@
                     <li class="@(ViewBag.currentPage + 1 > ViewBag.totalPages +1 ? "page-item disabled" : "page-item")">
                         <a class="page-link" asp-action="Index" asp-route-page=@(ViewBag.currentPage + 1)>Next</a>
                     </li>
+                     <li class="@(ViewBag.currentPage + 1 > ViewBag.totalPages +1 ? "page-item disabled" : "page-item")">
+                        <a class="page-link" asp-action="Index" asp-route-page=@(ViewBag.totalPages)>Last</a>
+                    </li>
 
 
                 </ul>
